@@ -24,7 +24,6 @@
 <meta property="og:url" content="http://yoursite.com/2014/12/19/git-manager/">
 <meta property="og:site_name" content="咆哮金刚猪的编程乐园">
 <meta property="og:description" content="总结自己的git使用方法。使用gogs和scm-manager管理本地源代码。">
-<meta property="og:image" content="https://travis-ci.org/gogits/gogs.svg?branch=master">
 <meta property="og:image" content="http://gogs.qiniudn.com/gogs_demo.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git本地代码管理使用gogs和scm-manager | 咆哮金刚猪的编程乐园">
@@ -194,8 +193,7 @@ classes that you can use:
 
     <section class="post">
       <p>总结自己的git使用方法。使用gogs和scm-manager管理本地源代码。<br><a id="more"></a></p>
-<h3 id="使用gogs(go语言搞出来的，高大上的选择)">使用gogs(go语言搞出来的，高大上的选择)</h3>
-<h1 id="Gogs_-_Go_Git_Service_">Gogs - Go Git Service <a href="https://travis-ci.org/gogits/gogs" target="_blank" rel="external"><img src="https://travis-ci.org/gogits/gogs.svg?branch=master" alt="Build Status"></a></h1>
+<h4 id="使用gogs(go语言搞出来的，高大上的选择)">使用gogs(go语言搞出来的，高大上的选择)</h4>
 <p>Gogs(Go Git Service) 是一个基于 Go 语言的自助 Git 服务。</p>
 <p><img src="http://gogs.qiniudn.com/gogs_demo.gif" alt="Demo"></p>
 <hr>
@@ -231,14 +229,20 @@ classes that you can use:
 <p>在机器上安装java环境，从<a href="http://java.com/zh_CN/download/manual.jsp" target="_blank" rel="external">http://java.com/zh_CN/download/manual.jsp</a>选择脱机版下载安装<br>从<a href="https://bitbucket.org/sdorra/scm-manager/wiki/download" target="_blank" rel="external">https://bitbucket.org/sdorra/scm-manager/wiki/download</a>下载最新的scm-server-1.24-app.zip<br>安装为系统服务：<br><code>scm-server.bat install</code></p>
 <p>然后在系统服务里设置为自动启动，然后启动服务就可以通过<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>访问了，默认用户名和密码都是<code>scmadmin</code>。<br>登进系统以后通过Repository Types修改Git中心库存放的路径。<br>修改默认的管理员用户名或者是其他的一些配置都可以找到%userprofile%.scm\config目录下的相应xml配置文件来修改，注意要重启scm-server服务。<br>如果要启用邮件以及提醒，还需要安装插件scm-mail-plugin、 scm-notify-plugin，然后在设置中把Mail相关的SMTP设置填写好。  </p>
 <p>如果代码提交要跟Redmine关联，还需要安装插件scm-redmine-plugin，然后在项目信息里的Redmine选项卡配置Redmine地址为<a href="http://localhost:3000；" target="_blank" rel="external">http://localhost:3000；</a><br>如果要启用更新、自动关闭，还需要scm-manager和redmine使用同样的用户名密码，而且Redmine设置里必须启用REST API；  </p>
-<p>然后在提交的时候需要用git commit –m “(#问题ID) fix 修复内容”来关闭问题，可以用的关键字如fix,fixed等可以自行配置。</p>
+<p>然后在提交的时候需要用<code>git commit –m “(#问题ID) fix</code>修复内容”来关闭问题，可以用的关键字如fix,fixed等可以自行配置。</p>
 <h4 id="客户端安装">客户端安装</h4>
-<p>不管最终是使用那一种客户端(Git Extensions：<a href="http://code.google.com/p/gitextensions/或TortoiseGit：http://code.google.com/p/tortoisegit/)，msysgit都是必须安装的：从http://msysgit.github.com/下载最新的Git-1.8.0-preview20121022.exe安装即可。" target="_blank" rel="external">http://code.google.com/p/gitextensions/或TortoiseGit：http://code.google.com/p/tortoisegit/)，msysgit都是必须安装的：从http://msysgit.github.com/下载最新的Git-1.8.0-preview20121022.exe安装即可。</a>  </p>
+<p>不管最终是使用那一种客户端<a href="http://code.google.com/p/gitextensions/" target="_blank" rel="external">Git Extensions</a>或<a href="http://code.google.com/p/tortoisegit/" target="_blank" rel="external">TortoiseGit：</a>，<code>msysgit</code>都是必须安装的：从<a href="http://msysgit.github.com/" target="_blank" rel="external">http://msysgit.github.com/</a>下载最新的Git-1.8.0-preview20121022.exe安装即可。  </p>
 <p>偏向使用命令行的只装msysgit就足够了；如果要使用图形界面可以选择msysgit自带的git gui，或者是另外安装git extensions或tortoisegit；个人感觉git extensions的图形界面比较强大，如果安装它的话一定要安装上KDiff3。  </p>
-<p>更便捷的就是与Visual Studio集成了，Git Extensions安装的时候可以选择安装Visual Studio插件集成；另外还有一个工具可以进一步提升便捷性Git Source Control Provider：<a href="http://gitscc.codeplex.com/，它依赖于msysgit和git" target="_blank" rel="external">http://gitscc.codeplex.com/，它依赖于msysgit和git</a> extensions，可以在官方网站下载安装或者在visual studio扩展管理里面搜索git进行安装。</p>
+<p>更便捷的就是与Visual Studio集成了，Git Extensions安装的时候可以选择安装Visual Studio插件集成；另外还有一个工具可以进一步提升便捷性<a href="http://gitscc.codeplex.com/" target="_blank" rel="external">Git Source Control Provider：</a>，它依赖于<code>msysgit</code>和<code>git extensions</code>，可以在官方网站下载安装或者在visual studio扩展管理里面搜索git进行安装。</p>
 <h4 id="Git配置">Git配置</h4>
-<p>Git客户端安装好之后最好配置一个全局的用户名及邮箱：<br>      git config —global user.name “Your Name Here”<br>      git config —global user.email your_email@youremail.com</p>
-<p>这个配置在新建Repository时可能会用到；另外可以通过一下命令来查看配置：<br>       git config —list</p>
+<p>Git客户端安装好之后最好配置一个全局的用户名及邮箱：</p>
+<blockquote>
+<p>   git config —global user.name “Your Name Here”<br>      git config —global user.email your_email@youremail.com</p>
+</blockquote>
+<p>这个配置在新建Repository时可能会用到；另外可以通过一下命令来查看配置：</p>
+<blockquote>
+<pre><code> git config --<span class="keyword">list</span>
+</code></pre></blockquote>
 
     </section>
 
