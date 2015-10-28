@@ -1,5 +1,10 @@
-Jekyll Clean Dark
-============
+---
+layout: page 
+title: About
+
+---
+
+### Dark version of jekyll-clean theme
 
 This theme was created on top of Jekyll Clean theme by Scotte, you can view the originnal version in action [on his blog](https://scotte.github.io).
 
@@ -13,7 +18,7 @@ sidebar.
 Optionally you can use:
 
  - [Disqus](http://disqus.com) as a comments system;
- - [Google Analytics](http://www.google.com/analytics/);
+ - [Google Analyticse](http://www.google.com/analytics/);
  - [Yandex Metrika](http://metrica.yandex.com);
  - Blog tags.
 

@@ -1,52 +1,38 @@
-markdown: kramdown
-safe: false
-permalink: /blog/posts/:title
-exclude:
-  - README.md
+# Jekyll configuration
+
+name: 咆哮金刚猪的编程乐园
+description: 不把github鼓捣成博客的程序猿不是一个好的喵星人
+
+# Url is currently only used only for the RSS feed in feed.xml
+url: http://howiewang.github.io
+#url: http://localhost:4000
 
 avatar: https://avatars2.githubusercontent.com/u/5234979?v=3&s=460
 
-# host: yanjunyi.com
+# For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
+#baseurl: '/jekyll-clean-dark'
 
-blog:
-    name: 咆哮金刚猪的编程乐园
-    desc: 不把github鼓捣成博客的程序猿不是一个好的喵星人
+social:
+  github: howiewang
 
-custom:
-    category:
-        thinking: thinking
-        help: help
-        linux: linux
-        python: python
-        web: web
+# Google Analytics key, leave blank to ignore
+google_analytics_key:
+# Yandex metrika (https://metrica.yandex.com/) leave blanc to ignore or put true to use
+yandex_metrika:
 
-    categories:
-      - name:  thinking
-        title: thinking
 
-      - name:  help
-        title: help
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: Howie
+comments: true
 
-      - name:  linux
-        title: linux
+permalink: /:year/:month/:title
+paginate: 3
 
-      - name:  python
-        title: python
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
-      - name: web
-        title: web
-
-    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
-
-meta:
-    author:
-        name: howiewang
-        email: zyhowie@gmail.com
-        disqus: Howie                     # Disqus缩略标识
-        gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
-        github: howiewang                          # GitHub账号
-        gravatar: 0538f067d11e011615b37cc91e9066c8  # Gravatar头像标识
-
-    disqus: disqus.com/embed.js                     # Disqus评论的JS地址
-    gapi: http://www.google.com/jsapi               # Google API地址
-    gravatar: http://en.gravatar.com/avatar/        # Gravatar头像服务器地址
+exclude: ['README.md', 'LICENSE']
