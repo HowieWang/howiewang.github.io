@@ -6,6 +6,9 @@ category:
 - help
 ---
 
+* content
+{:toc}
+
 总结自己的git使用方法。使用gogs和scm-manager管理本地源代码。
 <!-- more-->
 

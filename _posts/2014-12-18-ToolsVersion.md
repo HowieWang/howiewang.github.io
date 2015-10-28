@@ -5,6 +5,9 @@ category: thingking
 tags: vs2012
 ---
 
+* content
+{:toc}
+
 ###项目文件包含 ToolsVersion="12.0" 设置，但此工具集未知或缺失
 
 <!--more-->
