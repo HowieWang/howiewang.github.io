@@ -18,7 +18,7 @@ custom:
         help: help
         linux: linux
         python: python
-        communication: 交流分享
+ #       communication: 交流分享
     categories:
       - name:  thinking
         title: thinking
@@ -32,8 +32,8 @@ custom:
       - name:  python
         title: python
 
-      - name: communication
-        title: 交流分享
+#      - name: communication
+#       title: 交流分享
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
