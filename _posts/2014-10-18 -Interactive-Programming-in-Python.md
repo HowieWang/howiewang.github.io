@@ -5,7 +5,6 @@ category: python
 tags: coursera
 ---
 
-
 * content
 {:toc}
 

@@ -8,7 +8,7 @@ tags: hexo
 * content
 {:toc}
 
-ubuntu hexo安装错误问题
+##ubuntu hexo安装错误问题
 
 主要原因就是nodejs和npm的版本太低啦，看[这里](http://stackoverflow.com/questions/12913141/installing-from-npm-fails)得到解决
 
@@ -33,7 +33,7 @@ sudo apt-get update
 sudo apt-get install nodejs
 ```
 
-几个需要转移的文章：
+##几个需要转移的文章：
 [1](http://www.cnblogs.com/lanxuezaipiao/p/3604533.html?ADUIN=64172633&ADSESSION=1404210633&ADTAG=CLIENT.QQ.5329_.0&ADPUBNO=26349
 )
 [2](http://lanxuezaipiao.blog.163.com/blog/static/93779965201291710458275/
