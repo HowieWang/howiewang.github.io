@@ -1,6 +1,7 @@
+layout: post
 title:  hexo的基本用法
 category: 
-- Help  
+- help  
 
 tag:
 - hexo

@@ -1,7 +1,8 @@
+layout: post
 title: 云梯带你翻墙到外网
 date: 2014-12-18 18:25:27
 category: 
-- Web
+- web
 tag: 
 - yunti
 - svn

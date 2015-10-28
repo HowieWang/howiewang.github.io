@@ -1,6 +1,7 @@
+layout: post
 title: vs2012提示 ToolsVersion12.0错误
 date: 2014-12-18 10:15:39
-category: Cplusplus
+category: thingking
 tags: vs2012
 ---
 

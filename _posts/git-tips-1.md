@@ -1,8 +1,9 @@
+layout: post
 title: git使用技巧1-本地建立仓库和提交
 date: 2014-12-19 11:49:32
 tags: git
 category: 
-- Help
+- help
 ---
 
 总结自己的git使用方法。

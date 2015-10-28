@@ -1,6 +1,7 @@
+layout: post
 title: ubuntu12.04 hexo install error
 date: 2014-10-18 23:21:39
-category: Help
+category: help
 tags: hexo
 ---
 

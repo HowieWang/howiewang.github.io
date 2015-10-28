@@ -1,6 +1,7 @@
+layout: post
 title: 处理warning C4819该文件包含不能在当前代码页(936)中表示的字符
 date: 2014-12-22 15:50:13
-category: Cplusplus
+category: thinging
 tags: vs2012
 ---
 

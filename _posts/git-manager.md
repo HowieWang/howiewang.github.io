@@ -1,8 +1,9 @@
+layout: post
 title: git使用技巧2-如何使用gogs和scm-manager
 date: 2014-12-19 11:49:32
 tags: git
 category: 
-- Help
+- help
 ---
 
 总结自己的git使用方法。使用gogs和scm-manager管理本地源代码。
