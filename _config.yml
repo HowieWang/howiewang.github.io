@@ -1,0 +1,51 @@
+markdown: kramdown
+safe: false
+permalink: /blog/posts/:title
+exclude:
+  - README.md
+
+avatar: https://avatars2.githubusercontent.com/u/5234979?v=3&s=460
+
+# host: yanjunyi.com
+
+blog:
+    name: 咆哮金刚猪的编程乐园
+    desc: 不把github鼓捣成博客的程序猿不是一个好的喵星人
+
+custom:
+    category:
+        thinking: thinking
+        help: help
+        linux: linux
+        python: python
+        communication: 交流分享
+    categories:
+      - name:  thinking
+        title: thinking
+
+      - name:  help
+        title: help
+
+      - name:  linux
+        title: linux
+
+      - name:  python
+        title: python
+
+      - name: communication
+        title: 交流分享
+
+    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
+
+meta:
+    author:
+        name: howiewang
+        email: zyhowie@gmail.com
+        disqus: Howie                     # Disqus缩略标识
+        gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
+        github: howiewang                          # GitHub账号
+        gravatar: 1cd8c12591616d8c22aaa624f8c07834  # Gravatar头像标识
+
+    disqus: disqus.com/embed.js                     # Disqus评论的JS地址
+    gapi: http://www.google.com/jsapi               # Google API地址
+    gravatar: http://en.gravatar.com/avatar/        # Gravatar头像服务器地址
