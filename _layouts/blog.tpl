@@ -22,7 +22,7 @@
 	{{ content }}
 
 	<footer>
-		<p>&copy; Since 2012 <a href="http://yanjunyi.com/">yanjunyi.com</a></p>
+		<p>&copy; Since 2014 <a href="http://howie.wang/">howie.wang</a></p>
 	</footer>
 </div>
 
@@ -46,7 +46,7 @@
 			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
 			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
-		<p>由于经常造各种轮子，所以自诩为前端造轮子工程师。各种形式主义，工具癖，规划控，纠结帝……以及重度拖延症患者。</p>
+		<p>Linux, Python, Javascript, Docker...Web is the future!</p>
 	</div>
 	
 	<div class="block block-license">
