@@ -25,5 +25,5 @@ icon: glyphicon-heart
 ###几个已经存在的窝    
 
 * [主站](http://i.howie.wang)
-* [浩爷爱读书](pxjgz.lofter.com)
+* [浩爷爱读书](http://pxjgz.lofter.com)
 * [咱家的正牌喵星人](http://howiewang.github.io/LuLu/)
