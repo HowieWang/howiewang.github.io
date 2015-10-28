@@ -1,38 +1,26 @@
-# Jekyll configuration
-
-name: 咆哮金刚猪的编程乐园
+# Site settings
+title: 咆哮金刚猪的编程乐园
+email: i@howie.wang
 description: 不把github鼓捣成博客的程序猿不是一个好的喵星人
+# > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
 
-# Url is currently only used only for the RSS feed in feed.xml
-url: http://howiewang.github.io
-#url: http://localhost:4000
+# baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username:  howiewang
+permalink: /:year/:month/:day/:title/
 
-avatar: https://avatars2.githubusercontent.com/u/5234979?v=3&s=460
+# Build settings
+markdown: kramdown
 
-# For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
-#baseurl: '/jekyll-clean-dark'
+paginate: 10
+paginate_path: "page:num"
 
-social:
-  github: howiewang
-
-# Google Analytics key, leave blank to ignore
-google_analytics_key:
-# Yandex metrika (https://metrica.yandex.com/) leave blanc to ignore or put true to use
-yandex_metrika:
-
-
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: Howie
-comments: true
-
-permalink: /:year/:month/:title
-paginate: 3
-
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-
-exclude: ['README.md', 'LICENSE']
+# highlight
+# 本地用rouge, github上用pygments
+# highlighter: pygments
+# highlighter: rouge
+# highlighter: false
