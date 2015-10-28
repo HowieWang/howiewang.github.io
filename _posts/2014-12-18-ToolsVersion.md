@@ -1,7 +1,7 @@
 ---
 layout: post
 title: vs2012提示 ToolsVersion12.0错误
-category: thinking
+category: cpp
 tags: vs2012
 ---
 
