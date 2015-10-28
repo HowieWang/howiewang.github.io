@@ -19,6 +19,7 @@ custom:
         linux: linux
         python: python
         web: web
+
     categories:
       - name:  thinking
         title: thinking
@@ -33,7 +34,7 @@ custom:
         title: python
 
       - name: web
-       title: web
+        title: web
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
