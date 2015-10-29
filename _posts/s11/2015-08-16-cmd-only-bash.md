@@ -15,7 +15,7 @@ category:
 只显示：
 
 ```
--bash-4.1#
+	-bash-4.1#
 ```
 
 简单，配置文件不全而已。
@@ -24,42 +24,42 @@ category:
 ###bashrc 
 在当前目录下新建.bashrc文件： 
 ```
-# touch ~/.bashrc 
-# vi ~/.bashrc 
+	# touch ~/.bashrc 
+	# vi ~/.bashrc 
 ```
 并输入以下数据
 ```
-# .bashrc 
-# Source global definitions 
-if [ -f /etc/bashrc ]; then 
-. /etc/bashrc 
-fi 
-# User specific aliases and functions
+	# .bashrc 
+	# Source global definitions 
+	if [ -f /etc/bashrc ]; then 
+	. /etc/bashrc 
+	fi 
+	# User specific aliases and functions
 ```
 source以下使得其生效： 
-`# source ~/.bashrc `
+	`# source ~/.bashrc `
 
 ###bash_profile 
 在当前目录下新建.bash_profile文件： 
 ```
-# touch ~/.bash_profile 
-# vi ~/.bash_profile 
+	# touch ~/.bash_profile 
+	# vi ~/.bash_profile 
 ```
 并输入以下数据 
 ```
-# .bash_profile 
-# Get the aliases and functions 
-if [ -f ~/.bashrc ]; then 
-. ~/.bashrc 
-fi 
+		# .bash_profile 
+		# Get the aliases and functions 
+		if [ -f ~/.bashrc ]; then 
+		. ~/.bashrc 
+		fi 
 ```
 source以下使得其生效： 
-`# source ~/.bash_profile `
+	`# source ~/.bash_profile `
 可以看到已经能成功显示当前用户和路径了。 
 
 ---
 如果懒得自己写，你可以直接`wget`我的文件:
 ```
-http://howie.wang/.bashrc
-http://howie.wang/.bash_profile
+	http://howie.wang/.bashrc
+	http://howie.wang/.bash_profile
 ```
