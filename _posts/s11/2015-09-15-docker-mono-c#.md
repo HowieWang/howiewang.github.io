@@ -89,4 +89,4 @@ category:
 >Hello Mono!
 
 
-参考文章：http://dotnetliberty.com/index.php/2015/10/04/mono-and-c-sharp-on-docker-hello-world-in-15-steps/?_tmc=JnJW_22cvahemGz-VrPpV-o6AeShsAY4R6CsqV6i5V4&mkt_tok=3RkMMJWWfF9wsRonuqTMZKXonjHpfsX57uQtXa%2BzlMI%2F0ER3fOvrPUfGjI4ASsBiI%2BSLDwEYGJlv6SgFQ7LMMaZq1rgMXBk%3D
+[参考文章：](http://dotnetliberty.com/index.php/2015/10/04/mono-and-c-sharp-on-docker-hello-world-in-15-steps/?_tmc=JnJW_22cvahemGz-VrPpV-o6AeShsAY4R6CsqV6i5V4&mkt_tok=3RkMMJWWfF9wsRonuqTMZKXonjHpfsX57uQtXa%2BzlMI%2F0ER3fOvrPUfGjI4ASsBiI%2BSLDwEYGJlv6SgFQ7LMMaZq1rgMXBk%3D)
