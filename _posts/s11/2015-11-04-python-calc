@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  【howie玩python】-写个计算器不容易
-category: 
+categories: 
 -  python
 ---
 
 * content
-{:toc}
+  {:toc}
 
 
 > 用写个能解析运算表达式的计算器，大概分几步呢？
