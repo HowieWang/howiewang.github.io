@@ -29,3 +29,18 @@ category:
 - 数据的定义是按递归定义的。（比如Fibonacci函数）
 - 问题解法按递归算法实现。（回溯）
 - 数据的结构形式是按递归定义的。（比如树的遍历，图的搜索）
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## 参考资料：
+- [Python递归（recursion）专题](http://www.cnblogs.com/balian/archive/2011/02/11/1951054.html)
