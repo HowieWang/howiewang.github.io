@@ -42,5 +42,6 @@ category:
 
 
 ---
+
 ## 参考资料：
-- [Python递归（recursion）专题](http://www.cnblogs.com/balian/archive/2011/02/11/1951054.html)
+* [Python递归（recursion）专题](http://www.cnblogs.com/balian/archive/2011/02/11/1951054.html)
