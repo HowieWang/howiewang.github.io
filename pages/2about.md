@@ -33,7 +33,7 @@ s.parentNode.insertBefore(gcse, s);
             auto I   = 养喵人;
             auto am  = 非典型c++码农;
             关注 = python和移动互联网;
-            业余爱好  = 敲敲python，学学韩语，上上公开课。
+            业余爱好  = 敲敲python，学学鸟语，上上公开课。
             ??? = Linux + Python + Docker +...
         }
 
