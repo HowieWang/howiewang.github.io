@@ -39,7 +39,6 @@ s.parentNode.insertBefore(gcse, s);
 
 
 ### 超赞链接
--  [码农圈: ,一个面向程序员交流分享的新一代社区](https://coderq.com)  
 -  [雪峰大师: , javascript和python教程必备啊！](http://www.liaoxuefeng.com/)  
 -  [gitPro: , git学习中文版](http://jingxuan.io/progit)  
 -  [实验楼: , it技能高效学习楼](https://www.shiyanlou.com/register?inviter=NTY0MzE5MDcwNjU3)  
