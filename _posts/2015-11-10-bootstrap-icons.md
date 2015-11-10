@@ -29,4 +29,7 @@ category:
 ## Glyphicons Components
 [Available glyphs](http://getbootstrap.com/components/)
 
+## Bootstrap Glyphicon Components  
+[w3schools is all for you](http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp)
+
 需要的自取吧，总有一款适合你！
