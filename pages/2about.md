@@ -10,16 +10,16 @@ icon: glyphicon-heart
 > 先给你个自定义搜索框玩玩吧，平时找原版图书用的。
 
 
-      <script>
-  (function() {
-    var cx = '001822116234117285801:j43wicubn8g';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+<script>
+(function() {
+var cx = '001822116234117285801:j43wicubn8g';
+var gcse = document.createElement('script');
+gcse.type = 'text/javascript';
+gcse.async = true;
+gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
         '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(gcse, s);
   })();
 </script>
 <gcse:search></gcse:search>
