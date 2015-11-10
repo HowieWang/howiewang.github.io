@@ -25,7 +25,7 @@ s.parentNode.insertBefore(gcse, s);
 <gcse:search></gcse:search>
 
 
-###see you again!
+### see you again!
 
         int main(me)
         {
@@ -38,10 +38,15 @@ s.parentNode.insertBefore(gcse, s);
         }
 
 
+### 超赞链接
+  码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
+  Jark's Blog: http://wuchong.me, 主题作者，当然要留着感谢！
+  雪峰大师: http://www.liaoxuefeng.com/, javascript和python教程必备啊！
+  gitPro: http://jingxuan.io/progit, git学习中文版
+  实验楼: https://www.shiyanlou.com/register?inviter=NTY0MzE5MDcwNjU3, it技能高效学习楼
 
-
-###几个已经存在的窝    
+### 几个已经存在的窝    
 
 * [主站](http://i.howie.wang)
 * [浩爷爱读书](http://pxjgz.lofter.com)
-* [咱家的正牌喵星人](http://howiewang.github.io/LuLu/)
+* [咱家的正牌喵星人](http://lulumiao.github.io/)
