@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-
+title:  【Howie玩python】-类与对象
 category: 
 - python  
 ---
@@ -9,3 +9,14 @@ category:
 {:toc}
 
 
+## 帮助三剑客  
+
+- dir  
+- help  
+- google
+
+
+## 用法举例  
+
+
+## 实际工程应用  
