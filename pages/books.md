@@ -19,7 +19,7 @@ icon: glyphicon-list
 - [stackoverflow](http://stackoverflow.com/q/38210/343194) 上的程序员应该阅读的非编程类书籍有哪些？ [中文版](what-non-programming-books-should-programmers-read.md)
 - [github](https://github.com/vhf/free-programming-books) 上的一个流行的编程书籍索引  [中文版](https://github.com/vhf/free-programming-books/blob/master/free-programming-books-zh.md)
 
-感谢 [@siberiawolf](https://github.com/siberiawolf) 使用 Bootstrap 开发了网页版，地址：http://siberiawolf.com/free_programming/index.html
+感谢 [@siberiawolf](https://github.com/siberiawolf) 使用 Bootstrap 开发了网页版，[地址：](http://siberiawolf.com/free_programming/index.html)
 
 ## 参与交流
 
@@ -27,11 +27,11 @@ icon: glyphicon-list
 
 * 使用 [Issues](https://github.com/justjavac/free-programming-books-zh_CN/issues) 以及 Pull Request
 
-贡献者名单: https://github.com/justjavac/free-programming-books-zh_CN/graphs/contributors
+[贡献者名单:]( https://github.com/justjavac/free-programming-books-zh_CN/graphs/contributors)
 
 ## 目录
 
-* [语言无关类](#语言无关类)
+* [语言无关类](#notLanguage)
   * [操作系统](#操作系统)
   * [智能系统](#智能系统)
   * [分布式系统](#分布式系统)
@@ -84,7 +84,7 @@ icon: glyphicon-list
 * [读书笔记及其它](#读书笔记及其它)
 * [测试相关](#测试相关)
 
-## 语言无关类
+## notLanguage
 
 ### 操作系统
 
