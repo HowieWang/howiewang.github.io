@@ -35,9 +35,9 @@ category:
 
 ![](http://s1.51cto.com/wyfs02/M01/73/99/wKiom1YCCRHhW3dfAADkIzAT0wo273.jpg)
 
-##
+##[深入浅出 Linux命令行札记](http://os.51cto.com/art/201311/415977.htm)
 
-![]()
+![](http://s4.51cto.com/wyfs01/M00/32/44/wKioOVJ6LdXx3vAuAAJfDHaGbHw193.jpg)
 
 ##
 
