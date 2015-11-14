@@ -17,85 +17,85 @@ category:
 
 `help(str)` 就可以看见下面的源代码了。
 
-```
-class str(basestring):
-    """
-    str(object='') -> string
-    
-    Return a nice string representation of the object.
-    If the argument is a string, the return value is the same object.
-    """
-    def capitalize(self):  
-        """ 首字母变大写 """
-        """
-        S.capitalize() -> string
-        
-        Return a copy of the string S with only its first character
-        capitalized.
-        """
-        return ""
 
-    def center(self, width, fillchar=None):  
-        """ 内容居中，width：总长度；fillchar：空白处填充内容，默认无 """
+    class str(basestring):
         """
-        S.center(width[, fillchar]) -> string
+        str(object='') -> string
         
-        Return S centered in a string of length width. Padding is
-        done using the specified fill character (default is a space)
+        Return a nice string representation of the object.
+        If the argument is a string, the return value is the same object.
         """
-        return ""
+        def capitalize(self):  
+            """ 首字母变大写 """
+            """
+            S.capitalize() -> string
+            
+            Return a copy of the string S with only its first character
+            capitalized.
+            """
+            return ""
 
-    def count(self, sub, start=None, end=None):  
-        """ 子序列个数 """
-        """
-        S.count(sub[, start[, end]]) -> int
-        
-        Return the number of non-overlapping occurrences of substring sub in
-        string S[start:end].  Optional arguments start and end are interpreted
-        as in slice notation.
-        """
-        return 0
+        def center(self, width, fillchar=None):  
+            """ 内容居中，width：总长度；fillchar：空白处填充内容，默认无 """
+            """
+            S.center(width[, fillchar]) -> string
+            
+            Return S centered in a string of length width. Padding is
+            done using the specified fill character (default is a space)
+            """
+            return ""
 
-    def decode(self, encoding=None, errors=None):  
-        """ 解码 """
-        """
-        S.decode([encoding[,errors]]) -> object
-        
-        Decodes S using the codec registered for encoding. encoding defaults
-        to the default encoding. errors may be given to set a different error
-        handling scheme. Default is 'strict' meaning that encoding errors raise
-        a UnicodeDecodeError. Other possible values are 'ignore' and 'replace'
-        as well as any other name registered with codecs.register_error that is
-        able to handle UnicodeDecodeErrors.
-        """
-        return object()
+        def count(self, sub, start=None, end=None):  
+            """ 子序列个数 """
+            """
+            S.count(sub[, start[, end]]) -> int
+            
+            Return the number of non-overlapping occurrences of substring sub in
+            string S[start:end].  Optional arguments start and end are interpreted
+            as in slice notation.
+            """
+            return 0
 
-    def encode(self, encoding=None, errors=None):  
-        """ 编码，针对unicode """
-        """
-        S.encode([encoding[,errors]]) -> object
-        
-        Encodes S using the codec registered for encoding. encoding defaults
-        to the default encoding. errors may be given to set a different error
-        handling scheme. Default is 'strict' meaning that encoding errors raise
-        a UnicodeEncodeError. Other possible values are 'ignore', 'replace' and
-        'xmlcharrefreplace' as well as any other name registered with
-        codecs.register_error that is able to handle UnicodeEncodeErrors.
-        """
-        return object()
+        def decode(self, encoding=None, errors=None):  
+            """ 解码 """
+            """
+            S.decode([encoding[,errors]]) -> object
+            
+            Decodes S using the codec registered for encoding. encoding defaults
+            to the default encoding. errors may be given to set a different error
+            handling scheme. Default is 'strict' meaning that encoding errors raise
+            a UnicodeDecodeError. Other possible values are 'ignore' and 'replace'
+            as well as any other name registered with codecs.register_error that is
+            able to handle UnicodeDecodeErrors.
+            """
+            return object()
 
-    def endswith(self, suffix, start=None, end=None):  
-        """ 是否以 xxx 结束 """
-        """
-        S.endswith(suffix[, start[, end]]) -> bool
-        
-        Return True if S ends with the specified suffix, False otherwise.
-        With optional start, test S beginning at that position.
-        With optional end, stop comparing S at that position.
-        suffix can also be a tuple of strings to try.
-        """
-        return False
-```
+        def encode(self, encoding=None, errors=None):  
+            """ 编码，针对unicode """
+            """
+            S.encode([encoding[,errors]]) -> object
+            
+            Encodes S using the codec registered for encoding. encoding defaults
+            to the default encoding. errors may be given to set a different error
+            handling scheme. Default is 'strict' meaning that encoding errors raise
+            a UnicodeEncodeError. Other possible values are 'ignore', 'replace' and
+            'xmlcharrefreplace' as well as any other name registered with
+            codecs.register_error that is able to handle UnicodeEncodeErrors.
+            """
+            return object()
+
+        def endswith(self, suffix, start=None, end=None):  
+            """ 是否以 xxx 结束 """
+            """
+            S.endswith(suffix[, start[, end]]) -> bool
+            
+            Return True if S ends with the specified suffix, False otherwise.
+            With optional start, test S beginning at that position.
+            With optional end, stop comparing S at that position.
+            suffix can also be a tuple of strings to try.
+            """
+            return False
+    ```
 
 很多，咱们就不全贴上来了。
 
