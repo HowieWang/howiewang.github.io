@@ -9,7 +9,7 @@ category:
 * content
 {:toc}
 
-## 为啥要用模板  
+## 为啥要用模板  ？
 使用 django.http.HttpResponse() 来输出"Hello World！"。该方式将数据与视图混合在一起，不符合Django的MVC思想。MVC也就是模型，视图，控制器。用模板来添加修改网页的表现内容，更有利于大型工程的开发。
 
 ## 第一个hello模板
