@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  【姜戈带你飞】-django的template
+date:   2015-11-25 00:06:05
 category: 
 - django  
 ---
