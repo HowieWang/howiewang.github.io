@@ -135,3 +135,36 @@ dict可以用在需要高速查找的很多地方，在Python代码中几乎无�
         TypeError: unhashable type: 'list'
 
 ## 实际工程应用    
+
+### 冒泡排序  
+
+先要记住range的用法：  
+
+    >>> help(range)
+    Help on built-in function range in module __builtin__:
+
+    range(...)
+        range(stop) -> list of integers
+        range(start, stop[, step]) -> list of integers
+        
+        Return a list containing an arithmetic progression of integers.
+        range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults to 0.
+        When step is given, it specifies the increment (or decrement).
+        For example, range(4) returns [0, 1, 2, 3].  The end point is omitted!
+        These are exactly the valid indices for a list of 4 elements.
+
+    # 冒泡排序
+    li = [13, 22, 6, 99, 11, 1]
+
+    print li
+
+    for n in range(1, len(li)):
+        for m in range(len(li)-n): 
+            num1 = li[m]
+            num2 = li[m+1]
+            if num1 > num2:
+                temp = num1
+                li[m] = num2
+                li[m+1] = temp
+
+    print li
