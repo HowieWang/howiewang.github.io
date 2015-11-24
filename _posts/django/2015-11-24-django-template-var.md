@@ -224,5 +224,5 @@ hello.html中继承base.html，并替换特定block，hello.html修改后的代�
 ## 参考：
 
 - [1](http://www.phperz.com/article/15/0814/148615.html)  
-- []()  
+- 更多信息查看官方文档，这一节：- [Built-in template tags and filters]
 - []()  
