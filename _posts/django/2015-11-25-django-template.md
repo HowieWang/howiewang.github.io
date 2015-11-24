@@ -84,26 +84,26 @@ context 字典中元素的键值 "hello" 对应了模板中的变量 "{{ hello }
 ### if/else 标签
 基本语法格式如下：
 
-    {% if condition %}
-         ... display
-    {% endif %}
-    或者：
+        {% if condition %}
+             ... display
+        {% endif %}
+        或者：
 
-    {% if condition1 %}
-       ... display 1
-    {% elif condiiton2 %}
-       ... display 2
-    {% else %}
-       ... display 3
-    {% endif %}
+        {% if condition1 %}
+           ... display 1
+        {% elif condiiton2 %}
+           ... display 2
+        {% else %}
+           ... display 3
+        {% endif %}
 
 根据条件判断是否输出。if/else 支持嵌套。
 
 {% if %} 标签接受 and ， or 或者 not 关键字来对多个变量做判断 ，或者对变量取反（ not )，例如：
 
-    {% if athlete_list and coach_list %}
-         athletes 和 coaches 变量都是可用的。
-    {% endif %}
+        {% if athlete_list and coach_list %}
+             athletes 和 coaches 变量都是可用的。
+        {% endif %}
 
 ### for 标签
 {% for %} 允许我们在一个序列上迭代。
