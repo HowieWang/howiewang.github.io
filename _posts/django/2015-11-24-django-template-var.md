@@ -78,7 +78,113 @@ context 字典中元素的键值 "hello" 对应了模板中的变量 "{{ hello }
 上文的{{hello}}就是个模板变量，用两个大括号来表示。  
 需要和view里面的字典的键值相对应。
 
+## Django 模板标签
 
+> 由于jekyll就好解析问题，所有下面出现的百分号，请用实际的百分号代替。
+
+### if/else 标签
+基本语法格式如下：
+
+        {百分号 if condition 百分号}
+             ... display
+        {百分号 endif 百分号}
+
+
+根据条件判断是否输出。if/else 支持嵌套。
+
+        {百分号 if 百分号} 标签接受 and ， or 或者 not 关键字来对多个变量做判断 ，或者对变量取反（ not )，例如：
+
+        {百分号 if athlete_list and coach_list 百分号}
+             athletes 和 coaches 变量都是可用的。
+        {百分号 endif 百分号}
+
+### for 标签
+        {百分号 for 百分号} 允许我们在一个序列上迭代。
+
+与Python的 for 语句的情形类似，循环语法是 for X in Y ，Y是要迭代的序列而X是在每一个特定的循环中使用的变量名称。
+
+每一次循环中，模板系统会渲染在 {百分号 for 百分号} 和 {百分号 endfor 百分号} 之间的所有内容。
+
+例如，给定一个运动员列表 athlete_list 变量，我们可以使用下面的代码来显示这个列表：
+
+        <ul>
+        {百分号 for athlete in athlete_list 百分号}
+            <li>{{ athlete.name }}</li>
+        {百分号 endfor 百分号}
+        </ul>
+
+给标签增加一个 reversed 使得该列表被反向迭代：
+
+        {百分号 for athlete in athlete_list reversed 百分号}
+        ...
+        {百分号 endfor 百分号}
+
+可以嵌套使用 `{百分号 for 百分号}` 标签：
+
+        {百分号 for athlete in athlete_list 百分号}
+            <h1>{{ athlete.name }}</h1>
+            <ul>
+            {百分号 for sport in athlete.sports_played 百分号}
+                <li>{{ sport }}</li>
+            {百分号 endfor 百分号}
+            </ul>
+        {百分号 endfor 百分号}
+
+### ifequal/ifnotequal 标签
+
+`{百分号 ifequal 百分号} 标签比较两个值，当他们相等时，显示在 {百分号 ifequal 百分号} 和 {百分号 endifequal 百分号} 之中所有的值。`
+
+下面的例子比较两个模板变量 user 和 currentuser :
+
+        {百分号 ifequal user currentuser 百分号}
+            <h1>Welcome!</h1>
+        {百分号 endifequal 百分号}
+
+`和` {百分号 if 百分号} `类似， {百分号 ifequal 百分号} 支持可选的 {百分号 else百分号} 标签：`
+
+        {百分号 ifequal section 'sitenews' 百分号}
+            <h1>Site News</h1>
+        {百分号 else 百分号}
+            <h1>No News Here</h1>
+        {百分号 endifequal 百分号}
+
+### 注释标签
+
+Django 注释使用 {# #}。
+
+    {# 这是一个注释 #}
+
+###　过滤器
+模板过滤器可以在变量被显示前修改它，过滤器使用管道字符，如下所示：
+
+    {{ name|lower }}
+
+{{ name }} 变量被过滤器 lower 处理后，文档大写转换文本为小写。
+
+过滤管道可以被* 套接* ，既是说，一个过滤器管道的输出又可以作为下一个管道的输入：
+
+    {{ my_list|first|upper }}
+
+以上实例将第一个元素并将其转化为大写。
+
+有些过滤器有参数。 过滤器的参数跟随冒号之后并且总是以双引号包含。 例如：
+
+    {{ bio|truncatewords:"30" }}
+
+这个将显示变量 bio 的前30个词。
+
+其他过滤器：
+
+    addslashes : 添加反斜杠到任何反斜杠、单引号或者双引号前面。
+    date : 按指定的格式字符串参数格式化 date 或者 datetime 对象，实例：
+    {{ pub_date|date:"F j, Y" }}
+    length : 返回变量的长度。
+    include 标签
+    {百分号 include 百分号} 标签允许在模板中包含其它的模板的内容。
+
+下面这两个例子都包含了 nav.html 模板：
+
+    {百分号 include "nav.html" 百分号}
 
 ## 模板继承
 
@@ -93,23 +199,23 @@ context 字典中元素的键值 "hello" 对应了模板中的变量 "{{ hello }
 
           <body>
             <h1>Hello World!</h1>
-            {% block mainbody %}
+            {百分号 block mainbody 百分号}
                <p>original</p>
-            {% endblock %}
+            {百分号 endblock 百分号}
           </body>
         </html>
 
 以上代码中，名为mainbody的block标签是可以被继承者们替换掉的部分。
 
-        所有的  block  标签告诉模板引擎，子模板可以重载这些部分。
+        所有的 {百分号 block 百分号} 标签告诉模板引擎，子模板可以重载这些部分。
 
 hello.html中继承base.html，并替换特定block，hello.html修改后的代码如下：
 
-        {% extends "base.html" %}
+        {百分号 extends "base.html" 百分号}
 
-        {% block mainbody %}
+        {百分号 block mainbody 百分号}
         <p>继承了 base.html 文件</p>
-        {% endblock %}
+        {百分号 endblock 百分号}
 
 第一行代码说明hello.html继承了 base.html 文件。可以看到，这里相同名字的block标签用以替换base.html的相应block。
 
