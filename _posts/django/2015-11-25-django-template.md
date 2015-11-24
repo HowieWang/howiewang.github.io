@@ -87,15 +87,7 @@ context 字典中元素的键值 "hello" 对应了模板中的变量 "{{ hello }
         {% if condition %}
              ... display
         {% endif %}
-        或者：
 
-        {% if condition1 %}
-           ... display 1
-        {% elif condiiton2 %}
-           ... display 2
-        {% else %}
-           ... display 3
-        {% endif %}
 
 根据条件判断是否输出。if/else 支持嵌套。
 
