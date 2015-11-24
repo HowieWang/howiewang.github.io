@@ -101,7 +101,7 @@ context 字典中元素的键值 "hello" 对应了模板中的变量 "{{ hello }
 
 以上代码中，名为mainbody的block标签是可以被继承者们替换掉的部分。
 
-        所有的 {% block %} 标签告诉模板引擎，子模板可以重载这些部分。
+        所有的  block  标签告诉模板引擎，子模板可以重载这些部分。
 
 hello.html中继承base.html，并替换特定block，hello.html修改后的代码如下：
 
