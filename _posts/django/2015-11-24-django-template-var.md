@@ -219,10 +219,29 @@ hello.html中继承base.html，并替换特定block，hello.html修改后的代�
 
 第一行代码说明hello.html继承了 base.html 文件。可以看到，这里相同名字的block标签用以替换base.html的相应block。
 
+##  模板中添加静态文件
+
+Managing static files (e.g. images, JavaScript, CSS)¶
+
+Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”. Django provides django.contrib.staticfiles to help you manage them.
+
+This page describes how you can serve these static files.
+
+Configuring static files¶
+
+Make sure that django.contrib.staticfiles is included in your INSTALLED_APPS.
+
+In your settings file, define STATIC_URL, for example:
+
+STATIC_URL = '/static/'
+In your templates, either hardcode the url like /static/my_app/myexample.jpg or, preferably, use the static template tag to build the URL for the given relative path by using the configured STATICFILES_STORAGE storage (this makes it much easier when you want to switch to a content delivery network (CDN) for serving static files).
+...
+
+
 ----
 
 ## 参考：
 
 - [1](http://www.phperz.com/article/15/0814/148615.html)  
 - 更多信息查看官方文档，这一节：- [Built-in template tags and filters]
-- []()  
+- [static-files](https://docs.djangoproject.com/en/1.8/howto/static-files/)  

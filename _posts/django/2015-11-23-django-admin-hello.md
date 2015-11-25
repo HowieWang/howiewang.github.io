@@ -112,6 +112,69 @@ HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行�
 
 **注意：此时服务器会自动跟踪代码的改动，然后刷新页面就可以看到，不需要从新启动服务器。**
 
+## 创建hello应用
+
+### startapp
+上面是创建个项目，但其实项目里面创建n个项目才是实际用法。  
+
+        django-admin.py startapp hello
+
+这之后会自动在项目路径下创建一个hello文件夹。
+
+### settings.py
+
+在项目的settings.py中，添加应用名称，注意后面的逗号！
+
+        # Application definition
+
+        INSTALLED_APPS = (
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sessions',
+            'django.contrib.messages',
+            'django.contrib.staticfiles',
+            'hello',
+        )
+
+###　templates
+
+在应用hello中创建templates文件夹，添加html模板。假如是 `hello.html`
+
+        <h2>hi {{name}}</h2>
+
+### views.py
+
+在应用的view文件中，添加如下代码  ：
+
+        from django.template import loader, Context
+        from django.http import HttpResponse
+        # Create your views here.
+
+        def index(request):
+            t = loader.get_template('hello.html')  # load template
+            c = Context({'name': 'howie'}) # context, add data to template to render
+            html = t.render(c) # str
+            return HttpResponse(html)
+
+
+###　urls
+
+修改工程的urls.py文件，添加路由
+
+        urlpatterns = [
+            url(r'^admin/', include(admin.site.urls)),
+            url(r'^index/$', 'hello.views.index')
+        ]
+
+
+###　run
+
+        python manage.py runserver
+
+看见正确的输出，说明我们这个hello应用就正常工作了。
+
+
 
 ----
 
