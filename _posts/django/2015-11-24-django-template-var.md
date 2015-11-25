@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  【姜戈带你飞】-django的template
-date:   2015-11-25 00:06:05
+title:  【姜戈带你飞-2】-django的template
 category: 
 - django  
 ---
@@ -9,7 +8,7 @@ category:
 * content
 {:toc}
 
-## 为啥要用模板  ？
+## 为啥要用模板
 使用 django.http.HttpResponse() 来输出"Hello World！"。该方式将数据与视图混合在一起，不符合Django的MVC思想。MVC也就是模型，视图，控制器。用模板来添加修改网页的表现内容，更有利于大型工程的开发。
 
 ## 第一个hello模板
@@ -109,79 +108,73 @@ view中的字典写一个列表：
 
 ## Django 模板标签
 
+> 由于jekyll就好解析问题，所有下面出现的百分号，请用实际的百分号代替。
+
 ### if/else 标签
 基本语法格式如下：
 
-    {% if condition %}
-         ... display
-    {% endif %}
-    或者：
+        {百分号 if condition 百分号}
+             ... display
+        {百分号 endif 百分号}
 
-    {% if condition1 %}
-       ... display 1
-    {% elif condiiton2 %}
-       ... display 2
-    {% else %}
-       ... display 3
-    {% endif %}
 
 根据条件判断是否输出。if/else 支持嵌套。
 
-{% if %} 标签接受 and ， or 或者 not 关键字来对多个变量做判断 ，或者对变量取反（ not )，例如：
+        {百分号 if 百分号} 标签接受 and ， or 或者 not 关键字来对多个变量做判断 ，或者对变量取反（ not )，例如：
 
-    {% if athlete_list and coach_list %}
-         athletes 和 coaches 变量都是可用的。
-    {% endif %}
+        {百分号 if athlete_list and coach_list 百分号}
+             athletes 和 coaches 变量都是可用的。
+        {百分号 endif 百分号}
 
 ### for 标签
-{% for %} 允许我们在一个序列上迭代。
+        {百分号 for 百分号} 允许我们在一个序列上迭代。
 
 与Python的 for 语句的情形类似，循环语法是 for X in Y ，Y是要迭代的序列而X是在每一个特定的循环中使用的变量名称。
 
-每一次循环中，模板系统会渲染在 {% for %} 和 {% endfor %} 之间的所有内容。
+每一次循环中，模板系统会渲染在 {百分号 for 百分号} 和 {百分号 endfor 百分号} 之间的所有内容。
 
 例如，给定一个运动员列表 athlete_list 变量，我们可以使用下面的代码来显示这个列表：
 
-    <ul>
-    {% for athlete in athlete_list %}
-        <li>{{ athlete.name }}</li>
-    {% endfor %}
-    </ul>
+        <ul>
+        {百分号 for athlete in athlete_list 百分号}
+            <li>{{ athlete.name }}</li>
+        {百分号 endfor 百分号}
+        </ul>
 
 给标签增加一个 reversed 使得该列表被反向迭代：
 
-    {% for athlete in athlete_list reversed %}
-    ...
-    {% endfor %}
+        {百分号 for athlete in athlete_list reversed 百分号}
+        ...
+        {百分号 endfor 百分号}
 
-可以嵌套使用 {% for %} 标签：
+可以嵌套使用 `{百分号 for 百分号}` 标签：
 
-    {% for athlete in athlete_list %}
-        <h1>{{ athlete.name }}</h1>
-        <ul>
-        {% for sport in athlete.sports_played %}
-            <li>{{ sport }}</li>
-        {% endfor %}
-        </ul>
-    {% endfor %}
+        {百分号 for athlete in athlete_list 百分号}
+            <h1>{{ athlete.name }}</h1>
+            <ul>
+            {百分号 for sport in athlete.sports_played 百分号}
+                <li>{{ sport }}</li>
+            {百分号 endfor 百分号}
+            </ul>
+        {百分号 endfor 百分号}
 
 ### ifequal/ifnotequal 标签
 
-{% ifequal %} 标签比较两个值，当他们相等时，显示在 {% ifequal %} 和 {% endifequal %} 之中所有的值。
+`{百分号 ifequal 百分号} 标签比较两个值，当他们相等时，显示在 {百分号 ifequal 百分号} 和 {百分号 endifequal 百分号} 之中所有的值。`
 
 下面的例子比较两个模板变量 user 和 currentuser :
 
-    {% ifequal user currentuser %}
-        <h1>Welcome!</h1>
-    {% endifequal %}
+        {百分号 ifequal user currentuser 百分号}
+            <h1>Welcome!</h1>
+        {百分号 endifequal 百分号}
 
-和 {% if %} 类似， {% ifequal %} 支持可选的 {% else%} 标签：8
+`和` {百分号 if 百分号} `类似， {百分号 ifequal 百分号} 支持可选的 {百分号 else百分号} 标签：`
 
-    {% ifequal section 'sitenews' %}
-        <h1>Site News</h1>
-    {% else %}
-        <h1>No News Here</h1>
-    {% endifequal %}
+        {百分号 ifequal section 'sitenews' 百分号}
+            <h1>Site News</h1>
+        {百分号 else 百分号}
+            <h1>No News Here</h1>
+        {百分号 endifequal 百分号}
 
 ### 注释标签
 
@@ -215,11 +208,11 @@ Django 注释使用 {# #}。
     {{ pub_date|date:"F j, Y" }}
     length : 返回变量的长度。
     include 标签
-    {% include %} 标签允许在模板中包含其它的模板的内容。
+    {百分号 include 百分号} 标签允许在模板中包含其它的模板的内容。
 
 下面这两个例子都包含了 nav.html 模板：
 
-    {% include "nav.html" %}
+    {百分号 include "nav.html" 百分号}
 
 ## 模板继承
 
@@ -227,37 +220,56 @@ Django 注释使用 {# #}。
 
 接下来我们先创建之前项目的 templates 目录中添加 base.html 文件，代码如下：
 
-    <html>
-      <head>
-        <title>Hello World!</title>
-      </head>
+        <html>
+          <head>
+            <title>Hello World!</title>
+          </head>
 
-      <body>
-        <h1>Hello World!</h1>
-        {% block mainbody %}
-           <p>original</p>
-        {% endblock %}
-      </body>
-    </html>
+          <body>
+            <h1>Hello World!</h1>
+            {百分号 block mainbody 百分号}
+               <p>original</p>
+            {百分号 endblock 百分号}
+          </body>
+        </html>
 
 以上代码中，名为mainbody的block标签是可以被继承者们替换掉的部分。
 
-所有的 {% block %} 标签告诉模板引擎，子模板可以重载这些部分。
+        所有的 {百分号 block 百分号} 标签告诉模板引擎，子模板可以重载这些部分。
 
 hello.html中继承base.html，并替换特定block，hello.html修改后的代码如下：
 
-    {% extends "base.html" %}
+        {百分号 extends "base.html" 百分号}
 
-    {% block mainbody %}
-    <p>继承了 base.html 文件</p>
-    {% endblock %}
+        {百分号 block mainbody 百分号}
+        <p>继承了 base.html 文件</p>
+        {百分号 endblock 百分号}
 
 第一行代码说明hello.html继承了 base.html 文件。可以看到，这里相同名字的block标签用以替换base.html的相应block。
+
+##  模板中添加静态文件
+
+Managing static files (e.g. images, JavaScript, CSS)¶
+
+Websites generally need to serve additional files such as images, JavaScript, or CSS. In Django, we refer to these files as “static files”. Django provides django.contrib.staticfiles to help you manage them.
+
+This page describes how you can serve these static files.
+
+Configuring static files¶
+
+Make sure that django.contrib.staticfiles is included in your INSTALLED_APPS.
+
+In your settings file, define STATIC_URL, for example:
+
+STATIC_URL = '/static/'
+In your templates, either hardcode the url like /static/my_app/myexample.jpg or, preferably, use the static template tag to build the URL for the given relative path by using the configured STATICFILES_STORAGE storage (this makes it much easier when you want to switch to a content delivery network (CDN) for serving static files).
+...
+
 
 ----
 
 ## 参考：
 
 - [1](http://www.phperz.com/article/15/0814/148615.html)  
-- []()  
-- []()  
+- 更多信息查看官方文档，这一节：- [Built-in template tags and filters]
+- [static-files](https://docs.djangoproject.com/en/1.8/howto/static-files/)  
