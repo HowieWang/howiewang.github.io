@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Interactive Programming in Python
-category: python
+category:
+- python
 tags: coursera
 ---
 
