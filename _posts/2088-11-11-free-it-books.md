@@ -15,10 +15,9 @@ category:
 - [Linux工具快速教程](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
 
 > 全书分为三个部分：
-
-第一部分为基础篇，介绍我们工作中常用的工具的高频用法；
-第二部分为进阶篇，介绍的工具更多的适合程序员使用，分为程序构建、程序调试及程序优化；
-第三部分是工具参考篇，主要介绍实用工具的用法和实例；相比第一二部分，这里针对每个工具的介绍更全面；
+- 第一部分为基础篇，介绍我们工作中常用的工具的高频用法；
+- 第二部分为进阶篇，介绍的工具更多的适合程序员使用，分为程序构建、程序调试及程序优化；
+- 第三部分是工具参考篇，主要介绍实用工具的用法和实例；相比第一二部分，这里针对每个工具的介绍更全面；
 
 
 - [前端开发者的 Docker 之旅](http://docs-static.daocloud.io/docker-frontend/docker-frontend-open#rd?sukey=fc78a68049a14bb25637b760fdeddf7472e45434cd59374edab5ce662f2eed9bc7ef0782babaff800c37382d913e5cc7)
