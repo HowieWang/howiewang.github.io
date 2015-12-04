@@ -135,10 +135,10 @@ PyObject_HEAD只是c语音的一个宏定义，类似于字符串替换，后面
 
 类定义最简单的形式如下:
 
-class ClassName:
-    <statement-1>
-    .
-    <statement-N>
+    class ClassName:
+        <statement-1>
+        .
+        <statement-N>
 
 类的定义就像函数定义( def 语句)，要先执行才能生效(你当然可以把它放进 if 语句的某一分支，或者一个函数的内部。。
 
