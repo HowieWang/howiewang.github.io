@@ -35,7 +35,7 @@ category:
 
 
 ## python里的面向对象
-Python的官方版本，使用C语言实现，使用最为广泛。范爷在1989年就在c语言的基础上，添加了面向对象的概念，写出了python的核心代码，之后，python就成了个处处有对象的语言了，于是又用自己的各种带对象的细胞组成了各种各样有用的轮子。
+Python的官方版本，用C语言实现，使用也最为广泛。范爷在1989年就在c语言的基础上，添加了面向对象的概念，写出了python的核心代码，之后，python就成了个处处有对象的语言了，于是又用自己的各种带对象的细胞组成了各种各样有用的轮子。
 
 那么，咱们是怎么知道python是面向对象的呢？当然是撸代码啦！  
 
@@ -84,16 +84,33 @@ object can be simply a pointer -- moving an object would require
 updating all the pointers, and changing an object's size would require
 moving it if there was another object right next to it.)
 
-对象不漂浮在内存中;一旦分配的对象保持
-相同的大小和地址。对象必须拥有可变大小数据
-可以包含指向该对象的可变长的部件。并非所有的
-同一类型的对象具有相同的大小;但尺寸不能改变
-分配后。 （这些限制是由这样一个参考的
-对象可以是一个简单的指针 - 移动物体将需要
-更新所有的指针，改变对象的大小，需要
-移动它，如果有另外一个目的就在旁边。）
+对象不会在内存中到处跑;对象一旦分配就会保持相同的大小和地址。对象必须拥有可变大小数据
+可以包含指向该对象的可变长部分的指针。并非所有的同一类型的对象具有相同的大小;但分配后的大小是不能改变的。 （由于这些限制，所以一个对象的引用可以简单的是一个指针 - 移动一个对象将需要
+更新所有的指针，改变对象的大小的时候，如果这个对象旁边有另外一个对象，就需要移动它。）
 
+> Objects are always accessed through pointers of the type 'PyObject *'.
+The type 'PyObject' is a structure that only contains the reference count
+and the type pointer.  The actual memory allocated for an object
+contains other data that can only be accessed after casting the pointer
+to a pointer to a longer structure type.  This longer type must start
+with the reference count and type fields; the macro PyObject_HEAD should be
+used for this (to accommodate for future changes).  The implementation
+of a particular object type can cast the object pointer to the proper
+type and back.
+A standard interface exists for objects that contain an array of items
+whose size is determined when the object is allocated.
 
+对象总是通过这种“PyObject“的指针访问。PyObject类型是只包含引用计数
+和类型指针的结构。分配给对象的实际内存
+包含仅能铸造指针后可以访问其他数据
+的指针更长结构类型。这种较长的类型必须启动
+与引用计数和类型字段;宏PyObject_HEAD应
+用于这种（以适应未来的变化）。实施
+特定对象的类型可以在对象指针转换为适当的
+类型和背部。
+
+存在包含项目的数组对象的标准接口
+其尺寸，当对象被分配被确定。
 
 ## 面向对象举例
 这里简单举个把字符串格式化时候添加颜色的类。
