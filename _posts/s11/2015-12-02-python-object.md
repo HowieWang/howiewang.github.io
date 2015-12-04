@@ -35,13 +35,71 @@ category:
 
 
 ## python里的面向对象
+Python的官方版本，使用C语言实现，使用最为广泛。范爷在1989年就在c语言的基础上，添加了面向对象的概念，写出了python的核心代码，之后，python就成了个处处有对象的语言了，于是又用自己的各种带对象的细胞组成了各种各样有用的轮子。
+
+那么，咱们是怎么知道python是面向对象的呢？当然是撸代码啦！  
+
+> 小提示：下面这小段也许需要你有点c语言的基础。
+
+### 撸撸 object.h  
+
+源文件见github：https://github.com/wklken/Python-2.7.8/blob/master/Include/object.h  
+
+看这个单词，我们就感觉了，object是啥？就是个对象啊！python里所谓的面向对象，就靠他了！
+
+这个头文件很长，c语言定义了各种宏和函数指针，我看着头晕啊，咱们就先看看最上面的一大段注释，然后挑几个关键词看看好了。找找为啥python是面向对象的。
+
+> Objects are structures allocated on the heap.  Special rules apply to
+the use of objects to ensure they are properly garbage-collected.
+Objects are never allocated statically or on the stack; they must be
+accessed through special macros and functions only.   
+
+对象是在堆上分配的结构。使用对象时，应用特别的规则，以确保它们的垃圾回收。
+对象从未分配静态或在栈上;它们必须是仅通过特殊宏和函数访问。
+
+> An object has a 'reference count' that is increased or decreased when a
+pointer to the object is copied or deleted; when the reference count
+reaches zero there are no references to the object left and it can be
+removed from the heap.
+
+对象具有一个“引用计数”，当指针对象被复制或删除，会自动增加或减少;当“引用计数”
+达到零时，对象的引用就没有了，这时可以从堆移除。
+
+> An object has a 'type' that determines what it represents and what kind
+of data it contains.  An object's type is fixed when it is created.
+Types themselves are represented as objects; an object contains a
+pointer to the corresponding type object.  The type itself has a type
+pointer pointing to the object representing the type 'type', which
+contains a pointer to itself!.  
+
+一个对象有一个“类型”，决定这个对象代表什么，包含什么样的数据。在创建时对象的类型是固定的。类型本身表示为对象;一个对象包含一个相应的类型的对象的指针。类型本身有一个类型
+指针指向表示类型“type”的对象，这包含一个指向本身的指针！。
+
+> Objects do not float around in memory; once allocated an object keeps
+the same size and address.  Objects that must hold variable-size data
+can contain pointers to variable-size parts of the object.  Not all
+objects of the same type have the same size; but the size cannot change
+after allocation.  (These restrictions are made so a reference to an
+object can be simply a pointer -- moving an object would require
+updating all the pointers, and changing an object's size would require
+moving it if there was another object right next to it.)
+
+对象不漂浮在内存中;一旦分配的对象保持
+相同的大小和地址。对象必须拥有可变大小数据
+可以包含指向该对象的可变长的部件。并非所有的
+同一类型的对象具有相同的大小;但尺寸不能改变
+分配后。 （这些限制是由这样一个参考的
+对象可以是一个简单的指针 - 移动物体将需要
+更新所有的指针，改变对象的大小，需要
+移动它，如果有另外一个目的就在旁边。）
+
 
 
 ## 面向对象举例
-这里简单举个把字符串格式化时候添加颜色的色。
+这里简单举个把字符串格式化时候添加颜色的类。
 
 ## 参考  
-- []()    
+- [PYTHON 源码阅读 – 对象](http://python.jobbole.com/83443/)    
 - []()    
 - []()    
 - []()    
