@@ -47,7 +47,7 @@ Python的官方版本，用C语言实现，使用也最为广泛。范爷在1989
 
 ### 撸撸 object.h  
 
-源文件见github：https://github.com/wklken/Python-2.7.8/blob/master/Include/object.h  
+源文件见[github](https://github.com/wklken/Python-2.7.8/blob/master/Include/object.h )
 
 看这个单词，我们就感觉了，object是啥？就是个对象！python里所谓的面向对象，就靠他了！
 
@@ -118,7 +118,7 @@ type and back.
          PyObject_HEAD  # PyObject 依赖这个PyObject_HEAD， PyObject_HEAD定义了每一个PyObject的初始化
      } PyObject;
 
-PyObject_HEAD只是c语音的一个宏定义，类似于字符串替换，后面的才是实际内容，也就是可以替换第二段代码里结构体里的PyObject_HEAD，也就是说PyObject这个结构体，实际包含的是，一个双向链表，一个引用计数，一个指向类型的指针。
+PyObject_HEAD只是c语言的一个宏定义，类似于字符串替换，后面的才是实际内容，也就是可以替换第二段代码里结构体里的PyObject_HEAD，也就是说PyObject这个结构体，实际包含的是，一个双向链表，一个引用计数，一个指向类型的指针。
 
 
 ###  读读官方帮助class一章
