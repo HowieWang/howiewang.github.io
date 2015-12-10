@@ -11,9 +11,7 @@ category:
 
 > 一切皆对象（续篇），用个思维导图整理一下python面向对象的边边角角吧！
 
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="treestyles.css" type="text/css"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!--This file has been created with toxhtml.xsl--><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Python面向对象编程</title><link rel="stylesheet" href="Python面向对象编程.html_files/treestyles.css" type="text/css" /><script type="text/javascript" src="Python面向对象编程.html_files/marktree.js"> 
-    </script></head><body><div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
+<div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
 <a onclick="collapseAll(document.getElementById('base'))" href="#">Collapse</a></div><div class="basetext" id="base"><ul>
     <li class="col" id="FMID_842188119FM"><div class="nodecontent">Python面向对象编程</div>
         <ul class="subexp">
@@ -119,4 +117,4 @@ category:
         <ul class="subexp">
     <li class="basic"><div class="nodecontent">封装</div></li>
     <li class="basic"><div class="nodecontent">继承</div></li>
-    <li class="basic" id="FMID_77b65ff3c0f934a08bb21dbe97fd8b3dFM"><div class="nodecontent">多态</div></li></ul></li></ul></li></ul></div></body></html>
+    <li class="basic" id="FMID_77b65ff3c0f934a08bb21dbe97fd8b3dFM"><div class="nodecontent">多态</div></li></ul></li></ul></li></ul></div>
