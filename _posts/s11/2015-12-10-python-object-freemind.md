@@ -14,8 +14,7 @@ category:
 
 > 一切皆对象（续篇），用个思维导图整理一下python面向对象的边边角角吧！
 
-<div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
-<a onclick="collapseAll(document.getElementById('base'))" href="#">Collapse</a></div><div class="basetext" id="base"><ul>
+<div class="basetext" id="base"><ul>
     <li class="col" id="FMID_842188119FM"><div class="nodecontent">Python面向对象编程</div>
         <ul class="subexp">
     <li class="col"><div class="nodecontent">类的特殊成员</div>
