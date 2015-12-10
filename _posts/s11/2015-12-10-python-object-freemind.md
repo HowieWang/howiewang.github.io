@@ -9,7 +9,7 @@ category:
 * content
 {:toc}
 
-<script type="text/javascript" src="{{"/static/marktree.js" | prepend:site.baseurl}}"></script>
+<script type="text/javascript" src="{{"/static/marktree.js" }}"></script>
 <link rel="stylesheet" href="/static/treestyles.css" type="text/css" />
 
 > 一切皆对象（续篇），用个思维导图整理一下python面向对象的边边角角吧！
