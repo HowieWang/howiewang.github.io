@@ -222,12 +222,70 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 - 命令模式， 客户端启动时候就显示命令帮助，然后通过命令行+文件名的方式进行上传下载。  
 - 服务器端执行命令，可以随意一些，但是都限定到固定用户目录下  ，显示列表，增删文件等。
 - 添加md5文件验证，判断文件传递前后的一致性  
-- 颜色显示，用单独的ColorMe类去负责输出字符串的颜色显示  
 - 读写文件，进度条都可以单独封装成方法  
 - 服务器端添加日志，客户端可以读取日志
+
+### 命令模式  
+
+由于服务器端ip地址不确定，这里假装我这个ftp是跨平台无所不能啊！要不然怎么能叫FTPplus?! 所以我决定把客户端的启动方式写成`python file.py ip port`的形式。  如果不写ip和port就弹出帮助文档，告诉用户怎么使用。
+
+输入命令当然是用sys自带的argv了。简要代码如下：  这里通过try的异常处理，来判断是否采用正确的姿势启动客户端。
+
+    def usage():
+        print("Usage:")
+        print("python "+__file__+" <host> <port>")
+        sys.exit()
+
+
+    if __name__ == '__main__':
+        try:
+            host = sys.argv[1]
+            port = int(sys.argv[2])
+            print "connect to server--%s:%s" %(host, port)
+
+        except:
+            usage()
+
+
+### 服务器端    
+
+为了实现多线程，继承SocketServer和重写handle方法是必须要办的。  
+
+    class FTPplus(SocketServer.BaseRequestHandler): # 继承BaseRequestHandler用于实现多线程
+        """
+        The RequestHandler class for our server.
+
+        It is instantiated once per connection to the server, and must
+        override the handle() method to implement communication to the
+        client.
+        """
+        def handle(self):  # 必须从写这个方法，这是入口函数，socketServer的基类初始化时候就会调用
+            pass
+
+
+服务器端作为老大，我觉得可以加个新建用户的功能。就用json写个db吧。保存用户名和密码，让客户端验证使用。  
+这里我就简单建立一个用户好了。根据输入，然后写成db.json。这样启动服务器时候可以顺手建立一个，并生成相应的用户文件夹，客户端连接时候也就知道去用谁登陆了。
+
+    # make user for ftp server
+    def make_user():
+        user_dict = {}
+        info_dict = {}
+        user = raw_input(">user:")
+        cmd = "mkdir %s" %user
+        subprocess.Popen(cmd, shell=True)
+        pwd = raw_input(">pwd:")
+        info_dict["pwd"] = pwd
+        user_dict[user] = info_dict
+        f = file('db.json', 'w')
+        json.dump(user_dict, f, sort_keys=True, indent=4, separators=(',', ': '))
+        f.close()
+
 
 
 ## 怎么变得更好玩
 
 
-## 参考索引
+## 参考索引  
+
+- [alex的ftp示例]()  
+- [wusir的超级引导]()  
