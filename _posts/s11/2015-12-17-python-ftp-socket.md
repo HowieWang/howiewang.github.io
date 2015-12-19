@@ -342,6 +342,38 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 
 ## 怎么变得更好玩
 
+我们可以通过在服务器端添加接收命令的方法，在客户端添加发送命令的方法，让客户端可以操作服务器端相应的文件夹。
+
+服务器端： 
+
+    # get commands from the client, cd, dir, ls, ...
+    def get_commands(self, msg):
+        self.request.send('cmd start...')
+        data = self.request.recv(1024) # from the server
+        if data[:2].decode("utf-8") == 'cd':
+            if len(data) == 2: #only cd, set current dir
+                data += ' .'
+            os.chdir(data[3:].decode("utf-8"))
+        if len(data) > 0:
+            cmd = subprocess.Popen(data[:].decode("utf-8"), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
+            output_bytes = cmd.stdout.read() + cmd.stderr.read()
+            output_str = str(output_bytes)
+            self.request.sendall(output_str + str(os.getcwd()) + '> ') # return the current working dir
+            print(output_str)
+
+客户端：
+  
+
+    def send_commands(self):
+        data = self.sock.recv(1024) # from the server
+        print data
+        cmd = raw_input('>>')
+        if len(str.encode(cmd)) > 0: # convert cmd to str
+            self.sock.send(str.encode(cmd))
+            client_response = str(self.sock.recv(4096))
+            print(client_response)
+        else:
+            return False
 
 ## 参考索引  
 
