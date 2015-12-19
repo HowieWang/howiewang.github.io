@@ -205,6 +205,10 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 - 添加md5文件验证，判断文件传递前后的一致性  
 - 服务器端添加日志，客户端可以读取日志
 
+最开始，当然先画图，在开始码代码。  
+
+![](http://ww3.sinaimg.cn/bmiddle/96f6069fjw1ez4rrxt0wkj20l40is0v5.jpg)
+
 ### 命令模式  
 
 由于服务器端ip地址不确定，这里假装我这个ftp是跨平台无所不能啊！要不然怎么能叫FTPplus?! 所以我决定把客户端的启动方式写成`python file.py ip port`的形式。  如果不写ip和port就弹出帮助文档，告诉用户怎么使用。
@@ -341,5 +345,5 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 
 ## 参考索引  
 
-- [alex的ftp示例]()  
-- [wusir的超级引导]()  
+- [alex的ftp示例](http://3060674.blog.51cto.com/3050674/1687308)  
+- [wusir的超级引导](http://www.cnblogs.com/wupeiqi/articles/5040823.html)  
