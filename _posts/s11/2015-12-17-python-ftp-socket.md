@@ -128,37 +128,16 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
         def delete_file(self,msg): # 删除文件，命令写死了，不好玩
         def list_file(self,msg): # 文件列表，我要自己来判断，直接写命令，判断是否是合法路径就ok
 
-    if __name__ == "__main__":
-        HOST, PORT = "0.0.0.0", 9000
-
-        # Create the server, binding to localhost on port 9999
-        server = SocketServer.ThreadingTCPServer((HOST, PORT), MyTCPHandler) # 启动服务端，这里自定义的类，作为一个参数。用来启动多线程。
-
-        # Activate the server; this will keep running until you
-        # interrupt the program with Ctrl-C
-        server.serve_forever() # 一直走下去
-
 ### ftpClient
 
     class Client(object):
 
-        func_dic = {
-            'help': 'help',
-            'get' : 'get_file',
-            'put' : 'put_file',
-            'exit': 'exit',
-            'ls'  : 'list_file',
-            'cd'  :  'switch_dir',
-            'del' :  'delete'
-        }
         def __init__(self,host,port): # 初始化时候就连接服务器
             self.sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
             self.sock.connect((host,port))
             self.exit_flag = False
             if self.auth(): # 验证通过，就可以交互了
-
                 self.interactive()
-
 
                 def interactive(self):
             '''allowcate task to different function according to msg type'''
@@ -213,6 +192,7 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
                 else:
                     print "\033[31;1mFile %s doesn't exist on local disk\033[0m" % msg[1]
         def get_file(self,msg): # 类似服务器端
+            pass
 
 
 ## 开始优化
@@ -221,8 +201,8 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 
 - 命令模式， 客户端启动时候就显示命令帮助，然后通过命令行+文件名的方式进行上传下载。  
 - 服务器端执行命令，可以随意一些，但是都限定到固定用户目录下  ，显示列表，增删文件等。
+- 上传文件重复，可以选择是否覆盖，下载就无所谓了，因为我就想下载服务器最新的
 - 添加md5文件验证，判断文件传递前后的一致性  
-- 读写文件，进度条都可以单独封装成方法  
 - 服务器端添加日志，客户端可以读取日志
 
 ### 命令模式  
@@ -279,6 +259,80 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
         f = file('db.json', 'w')
         json.dump(user_dict, f, sort_keys=True, indent=4, separators=(',', ': '))
         f.close()
+
+服务器端发送文件文件比较简单，就分两部分好了，一部分按照1024去发，剩下的不足1024单独发一下：  
+
+    f = file(file_full_name,'rb') # 读的方式打开文件，开始发送
+                    size_left = file_size # 用剩余多少来做标志
+                    #print "--size left:",size_left
+                    while size_left >0: # 只要有剩下的就继续发
+                        if size_left < 1024: #不到1024，就有多少发多少
+                            self.request.send(f.read(size_left))
+                            size_left = 0
+                        else:
+                            self.request.send(f.read(1024)) # 每次发1024，剩下的大小也就少了1024
+                            size_left -= 1024
+
+接收文件时候, 有个关键地方是，每次收1024，还是有多少收多少？
+
+
+        while not recv_size == file_size: # 只要没接受完，就继续
+            data = self.request.recv(1024) # 每次收1024 或者 recv(file_size-size_recv) ？
+            recv_size += len(data) # 大小就增加收到的文件大小
+            f.write(data) # 收到就写
+
+### 文件覆盖  
+
+如果服务器端文件已经存在，上传时候就需要考虑是否覆盖。需要服务器和客户端多一次消息的传递。  客户端可以添加类似代码 ：
+
+                if feedback.startswith("push-file-exist"):
+                    still_push = raw_input("file exists: <yes> to rewrite or <no> to cancel:")
+                    if still_push == "yes":
+                        self.sock.send("push-yes")
+                        feedback = self.sock.recv(1024) # 收到回复，服务器准备好了，就开始发送
+                    else:
+                        exit_msg =  "file exists, you said cancel...stop push file"
+                        self.exit(exit_msg)
+                        return
+
+服务器端对应添加：  
+
+        if os.path.isfile(filename): # 如果文件已经存在，是否覆盖？
+            msg_exist = 'push-file-exist'
+            self.request.send(msg_exist)
+            client_msg = self.request.recv(1024)
+            if client_msg.split("-")[-1] == "yes":
+                f = file("%s" %(filename) ,'wb') # 覆盖就开始写吧
+                print "file exists, but rewrite it"
+            else:
+                print "file exists, return"
+                return
+
+### md5的文件验证  
+
+添加如下方法，然后分别在服务器端和客户端验证就好了。这里需要`import hashlib`。这里调试时候发现有意思的：上传的文件md5一致，下载的就不一样了，正在检查一下为什么。
+
+    def check_md5(self, filename, md5):
+        new_md5 = self.hash_file(filename)
+        print "old file md5= %s" %md5
+        print "new file md5= %s" %new_md5
+        if md5 == new_md5:
+            print "file md5 is the same!"
+            return True
+        else:
+            print "md5 is not the same, error in transfer"
+            return False
+
+    def hash_file(self, filename):
+        hasher = hashlib.md5()
+        with open(filename, 'rb') as afile:
+            buf = afile.read()
+            hasher.update(buf)
+        return hasher.hexdigest()
+
+### 添加日志  
+
+日志是应用管理中的利器啊！我们当然要添加一个，就放在服务器端，客户端根据需要可以查看。  
 
 
 
