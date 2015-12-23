@@ -338,49 +338,7 @@ ftp主要分为服务器端和客户端。从源码上可以看出，alex把这�
 
 日志是应用管理中的利器啊！我们当然要添加一个，就放在服务器端，客户端根据需要可以查看。  
 
-服务器端  
-
-编写serverlog类
-
-    class LogRecordStreamHandler(SocketServer.StreamRequestHandler):
-
-    class LogRecordSocketReceiver(SocketServer.ThreadingTCPServer):
-
-然后再修改main函数：
-
-   logging.basicConfig(
-        format='%(relativeCreated)5d %(name)-15s %(levelname)-8s %(message)s')
-
-    try:
-        # Create the server, binding to localhost on port 9999
-        server = SocketServer.ThreadingTCPServer((HOST, PORT), FTPplus) # 启动服务端，这里自定义的类，作为一个参数。用来启动多线程。
-
-        tcpserver = LogRecordSocketReceiver(HOST, PORT+1) #端口号加１
-        print('About to start TCP server...')
-        # Activate the server; this will keep running until you
-        # interrupt the program with Ctrl-C
-        server.serve_forever() # 一直走下去
-        tcpserver.serve_until_stopped() # 注意这两个server的结束顺序！
-
-客户端
-
-        import logging, logging.handlers
-
-        rootLogger = logging.getLogger('')
-        rootLogger.setLevel(logging.DEBUG)
-        socketHandler = logging.handlers.SocketHandler(host, port+1)
-        # don't bother with a formatter, since a socket handler sends the event as
-        # an unformatted pickle
-        rootLogger.addHandler(socketHandler)
-
-        # Now, we can log to the root logger, or any other logger. First the root...
-        logging.info('start log.')
-
-        # Now, define a couple of other loggers which might represent areas in your
-        # application:
-
-        logger1 = logging.getLogger('myapp.area1')
-        logger1.debug('debug log.')
+这里直接用logging模块来完成，写成服务器或者客户端的类中一个模块。
 
 
 ## 怎么变得更好玩
