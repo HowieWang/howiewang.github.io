@@ -1,8 +1,10 @@
 ---
 layout: post
-title: 云梯带你翻墙到外网
+title: docker科学上网使用说明
 category: 
 - web
+- docker
+
 tag: 
 - yunti
 - svn
@@ -10,6 +12,58 @@ tag:
 
 * content
 {:toc}
+
+其实科学上网，就下面三步，分分钟搞定。当然，具备一台境外机器是必须的。
+
+## docker 的安装
+CentOS 7系统安装docker很方便。
+
+由于CentOS-Extras源中已内置Docker，读者可以直接使用yum命令进行安装：
+
+    $ sudo yum install -y docker   #**【之后要重启系统，然后再start服务才可以！！！】**
+    $ sudo service docker start
+
+
+其他系统请移步这里：http://howiewang.github.io/2015/08/01/install-docker/
+其实貌似大部分直接这一句就搞定了：
+
+运行Docker的安装脚本，如下命令：
+    
+    $ curl -sSL https://get.docker.com/ | sh
+
+
+## 使用ss镜像
+
+不会玩docker？ 无所谓，直接运行命令就搞定！  
+
+1）拿到镜像，如下命令：
+
+    docker pull oddrationale/docker-shadowsocks
+2）运行镜像，启动Shadowsocks。
+
+    docker run -d -p 2022:2022 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 2022 -k yourpasswd -m aes-256-cfb
+
+简单命令解释：
+
+    run -d 后台运行
+     -p 2022:2022 服务器与docker内部端口映射
+    oddrationale/docker-shadowsocks docker镜像，如果这个不好用了。联系我。
+     -s 0.0.0.0 -p 2022 -k yourpasswd -m aes-256-cfb 镜像内部命令，建立容器用的。
+
+哪些要修改？
+
+**2022 和你自己的密码！**
+
+## 客户端科学上网
+
+客户端下载地址：https://github.com/shadowsocks/shadowsocks-gui。
+
+我猜你下载不顺利，因为这个在亚马逊s3，如果我没记错的话，会特别慢。所以你需要到国内某云端去搜。
+
+
+
+--------
+`下面的内容主要是以前用的vpn，还是不错的。留着备用。`
 
 ##下面简单介绍一下翻墙好帮手-云梯。
 >云梯致力于提供专业的 VPN 服务，用我们的技术和热情，为大家打造快速、安全、高效的 VPN 接入及解决方案，满足自由访问互联网、网络传输加密、保护隐私等多种需求。成熟的技术、专业的管理以及真诚的服务，让所有人都能享受开放的互联网。
