@@ -250,26 +250,96 @@ The  concurrent.futures library has a  ThreadPoolExecutor class that can be used
 
 ## 自己造轮子  
 
-好了，看了这么多，轮子还是要自己造一个的。赵猫画虎也好啊！学习有个721原则，学习占10%，反馈占20%，剩下的70%要用实践来完成。这样长期下去，学习的知识才会变成我的能力。
-这种编程的学习更是如此。撸完别人的代码，自己是必须呀敲一敲，再敲一敲才过瘾！
+好了，看了这么多，轮子还是要自己造一个的。
+
+赵猫画虎也好啊！
+
+学习有个721原则，学习占10%，反馈占20%，剩下的70%要用实践来完成。这样长期下去，学习的知识才会变成我的能力。
+这种编程的学习更是如此。撸完别人的代码，自己是必须要敲一敲，再敲一敲才过瘾！
+
+线程池采用Queue和Thread完成。测试时候采用个洗澡场景，记录完成率和每人洗澡时间。
+
+    #!/usr/bin/env python
+    # -*- coding:utf-8 -*-
+
+    __author__ = 'SothisHowie'
+
+    # standard library modules
+    from Queue import Queue
+    from threading import Thread
+
+    class ThreadWorker(Thread):
+        """Thread executing tasks from a given tasks queue"""
+        def __init__(self, tasks):
+            Thread.__init__(self)
+            self.tasks = tasks # 任务队列
+            self.daemon = True # 必须在start之前
+            self.start()
+
+        def run(self):
+            while True:
+                func, args, kargs = self.tasks.get() # 取出来一个任务
+                try:
+                    func(*args, **kargs) # 执行任务函数
+                except Exception as e:
+                    print e
+                self.tasks.task_done()
 
 
+    class MyThreadPool:
+        """Pool of threads consuming tasks from a queue"""
+        def __init__(self, num_threads):
+            self.tasks = Queue(num_threads)
+            for _ in range(num_threads):
+                ThreadWorker(self.tasks) # 启动每一个任务
+
+        def add_task(self, func, *args, **kargs):
+            """Add a task to the queue"""
+            self.tasks.put((func, args, kargs)) # 放入队列
+
+        def wait_completion(self):
+            """Wait for completion of all the tasks in the queue"""
+            self.tasks.join()
+
+
+    if __name__ == '__main__':
+        from random import randrange
+        delays = [randrange(1, 10) for i in range(100)] # 随机有100以内的人去洗澡
+
+        from time import sleep
+        def bath_time(d):
+            print 'take a bath for (%d)sec' % d # 每个人洗澡时间1-10s
+            sleep(d)
+
+        # 1) Init a Thread pool with the desired number of threads
+        pool = MyThreadPool(20) # 假设有20个喷头
+
+        for i, d in enumerate(delays):
+            # print the percentage of tasks placed in the queue
+            print 'bath finish percent of total number: %.2f%c' % ((float(i)/float(len(delays)))*100.0,'%') #有多少人洗完了
+
+            # 2) Add the task to the queue
+            pool.add_task(bath_time, d)
+
+        # 3) Wait for completion
+        pool.wait_completion()
 
 
 ## 多线程应用  
 
+如前文所说，多线程要用在IO操作很多的场景。比如浏览器后台的读写，用户交互界面不能卡住，读写数据就可以用多线程和服务器进行传输。
 
 ## 参考  
 
--[知乎-对CPU密集型计算和IO密集型运算，应该选择多进程还是多线程？](https://www.zhihu.com/question/29927678)  
--[廖雪峰python-线程与进程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001397567993007df355a3394da48f0bf14960f0c78753f000)    
--[Python 快速教程（标准库08）：多线程与同步 (threading包)](http://www.cnblogs.com/vamei/archive/2012/10/11/2720042.html)    
--[Python多线程简易版 - 线程池threadpool](http://www.zhidaow.com/post/python-threadpool)    
--[使用 multiprocessing.dummy 执行多线程任务](https://mozillazg.com/2014/01/python-use-multiprocessing-dummy-run-theading-task.html)    
--[python线程池](http://www.the5fire.com/python-thread-pool.html)    
--[Python Thread Pool (Python recipe)](http://code.activestate.com/recipes/577187-python-thread-pool/)    
--[]()    
--[]()    
+- [知乎-对CPU密集型计算和IO密集型运算，应该选择多进程还是多线程？](https://www.zhihu.com/question/29927678)  
+- [廖雪峰python-线程与进程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001397567993007df355a3394da48f0bf14960f0c78753f000)    
+- [Python 快速教程（标准库08）：多线程与同步 (threading包)](http://www.cnblogs.com/vamei/archive/2012/10/11/2720042.html)    
+- [Python多线程简易版 - 线程池threadpool](http://www.zhidaow.com/post/python-threadpool)    
+- [使用 multiprocessing.dummy 执行多线程任务](https://mozillazg.com/2014/01/python-use-multiprocessing-dummy-run-theading-task.html)    
+- [python线程池](http://www.the5fire.com/python-thread-pool.html)    
+- [Python Thread Pool (Python recipe)](http://code.activestate.com/recipes/577187-python-thread-pool/)    
+- [A Better Model for Day to Day Threading Tasks-使用 multiprocessing.dummy ](http://chriskiehl.com/article/parallelism-in-one-line/)    
+- []()    
 
 ---
 > 人生苦短，python的世界里感谢有你。
