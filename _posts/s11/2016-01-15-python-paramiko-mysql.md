@@ -337,7 +337,7 @@ ubuntu下mysql-python模块的安装
            sftp.get(remote_path, local_path)
            sftp.close()
 
-           
+
 ----
 ## 参考
 
@@ -348,7 +348,7 @@ ubuntu下mysql-python模块的安装
 写代码时候找背景音乐，发现这个podcast不错
 可以一边学python一边学英语了。哈哈！
 
-强烈推荐：
+强烈推荐：[https://talkpython.fm](https://talkpython.fm)
 
 <div class="talk-python-embedded-player"
      data-episode-id="39"
