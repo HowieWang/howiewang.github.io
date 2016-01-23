@@ -49,7 +49,13 @@ category:
 各个插件都是单独的函数，返回每项服务的一个字典。主程序通过redis的订阅发布频道处理信息。
 
 > 服务器端    
+服务器端稍微复杂一些。主要有3个目录，配置目录，服务文件目录和主程序目录。与上面不同的是，服务目录在配置文件目录的里面。
 
+先说服务目录。这里先定义个通用服务的模板`generic.py`，然后通过这个继承出单独的`linux`模板，里面设置linux需要监控的服务，这就有利于后面扩展出来mac和win单独的服务。
+
+配置目录中，还有主机，配置，模板三个文件。其中主机文件先根据服务信息生成，然后再组成主机组，放到模板文件中。
+
+核心程序目录有3个文件，主程序，redis，和序列化。主程序用来处理所有配置信息的设置，监控信息的处理逻辑。序列化文件用来处理监控信息与redis的读写。
 
     [root@localhost monitor]# tree
     .
@@ -89,9 +95,9 @@ category:
     │   ├── __init__.py
     │   └── MonitorServer.py   # 服务端入口程序
 
-
+客户端的代码继承关系图：
 
 ![](http://7xio9f.com1.z0.glb.clouddn.com/pythondiagram-client.png)    
 
-
+服务器的代码继承关系图：
 ![](http://7xio9f.com1.z0.glb.clouddn.com/pythondiagram-server-all.png)    
