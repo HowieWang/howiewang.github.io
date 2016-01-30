@@ -223,7 +223,7 @@ CSS 的这些部分（html-tag-name、id-of-html-tag 或 class-of-html-tag）称
 ## 参考
 
 - [thecodeplayer-超级推荐](http://thecodeplayer.com/)      
-- [很酷的设计](http://designscrazed.org/css-html-login-form-templates/)          
-- [again cool](https://colorlib.com/wp/html5-and-css3-login-forms/)     
+- [很酷的设计--css-html-login-form-templates](http://designscrazed.org/css-html-login-form-templates/)          
+- [again cool--html5-and-css3-login-forms](https://colorlib.com/wp/html5-and-css3-login-forms/)     
 - [web desing blog--queness](http://www.queness.com/post/256/vertical-scroll-menu-with-jquery-tutorial)          
 - [100-great-css-menu-tutorials](http://www.noupe.com/essentials/freebies-tools-templates/100-great-css-menu-tutorials.html)
