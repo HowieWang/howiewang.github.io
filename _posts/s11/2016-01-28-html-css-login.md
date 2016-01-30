@@ -218,7 +218,7 @@ CSS 的这些部分（html-tag-name、id-of-html-tag 或 class-of-html-tag）称
 
 [ued.ctrip.com](http://ued.ctrip.com/webkitcss/prop/transition-timing-function.html)
 
-
+当然，一个登录框不会这么简单的结束，下一次我们会结合js的知识，介绍一下怎么做出一个动感的现代感十足的登录框。
 
 ## 参考
 
