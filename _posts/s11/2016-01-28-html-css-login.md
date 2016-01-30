@@ -105,6 +105,120 @@ CSS 的这些部分（html-tag-name、id-of-html-tag 或 class-of-html-tag）称
 
 ## 登录框示例
 
+好了下面才是主要内容：
+
+首先我们编写登录页的框架内容：
+
+主要用到这么几个标签：  
+
+- head:文档头部，包含css，js链接等    
+- body:文档内容    
+- div:分块用，配合css添加样式，单独没啥意义    
+- ul:无序列表，配合li使用，有序的是ol    
+- li:列表    
+- h1: 一级标题   
+- form: 表单   
+- imput:输入框等   
+- label:标签  
+- a,herf:链接  
+
+主要代码为：
+
+    <div class="form">
+          
+          <ul class="tab-group">
+            <li class="tab active"><a href="#signup">注册</a></li>
+            <li class="tab"><a href="#login">登录</a></li>
+          </ul>
+          
+          <div class="tab-content">
+            <div id="signup">   
+              <h1>免费注册</h1>
+              
+              <form action="/" method="post">
+              
+              <div class="top-row">
+                <div class="field-wrap">
+                  <label>
+                    First Name<span class="req">*</span>
+                  </label>
+                  <input type="text" required autocomplete="off" />
+                </div>
+            
+                <div class="field-wrap">
+                  <label>
+                    Last Name<span class="req">*</span>
+                  </label>
+                  <input type="text"required autocomplete="off"/>
+                </div>
+              </div>
+
+              <div class="field-wrap">
+                <label>
+                  Email Address<span class="req">*</span>
+                </label>
+                <input type="email"required autocomplete="off"/>
+              </div>
+              
+              <div class="field-wrap">
+                <label>
+                  Set A Password<span class="req">*</span>
+                </label>
+                <input type="password"required autocomplete="off"/>
+              </div>
+
+
+            <ul class="tab-group">
+                <li ><a href="login.html">现在登录</a></li>
+                <li ><a href="index.html">取消</a></li>
+                <li ><a href="info.html">完善信息</a></li>
+            </ul>
+          
+              
+              </form>
+
+            </div>
+        
+### css样式解释    
+
+上面代码中有很多class，id之类的内容，下面详细说明一下：
+
+如前文所说，css通过选择器，选择相应的html标签，然后给他们添加样式，这里的class可以在css文件中去寻找以`.`开头的名称，id则去寻找`#`开头的名称。
+
+先看这句：
+
+      <div class="tab-group">
+
+我们到css文件中寻找`tab-group`，可以发现这样的代码：下面我们以注释的方式说明一下：
+
+        .tab-group li a { /*tab-group类,li,a俩个html标签都用这{}里的样式*/
+          display: block; /*按块排列*/
+          text-decoration: none; /*文字装饰*/
+          padding: 15px; /*内边距属性，顺序上，右，下，左*/
+          background: rgba(160, 179, 176, 0.25); /*背景色*/
+          color: #a0b3b0; /*文字颜色*/
+          font-size: 20px; /*字体大小*/
+          float: left; /*向左悬浮靠近*/
+          width: 50%; /*宽，按整个宽度百分比*/
+          text-align: center; /*对齐*/
+          cursor: pointer; /*鼠标样式*/
+          -webkit-transition: .5s ease; /*Safari 和 Chrome支持过渡*/
+          transition: .5s ease; /*http://www.w3school.com.cn/css3/css3_transition.asp*/
+        }
+
+其中过渡的效果可以做的很炫，具体参考：
+
+    linear  线性过渡。等同于cubic-bezier(0.0, 0.0, 1.0, 1.0)。
+    ease    平滑过渡。等同于cubic-bezier(0.25, 0.1, 0.25, 1.0)。
+    ease-in 由慢到快。等同于cubic-bezier(0.42, 0, 1.0, 1.0)。
+    ease-out    由快到慢。等同于cubic-bezier(0, 0, 0.58, 1.0)。
+    ease-in-out 由慢到快再到慢。等同于cubic-bezier(0.42, 0, 0.58, 1.0)。
+    cubic-bezier(x1, y1, x2, y2)    自定义时间函数，x1、x2必须在[0, 1]区间内，y1、y2可超过此范围。Chr16+、Saf Nightly、Android ?。
+
+
+[ued.ctrip.com](http://ued.ctrip.com/webkitcss/prop/transition-timing-function.html)
+
+
 
 ## 参考
 
