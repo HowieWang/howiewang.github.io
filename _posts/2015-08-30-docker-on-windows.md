@@ -11,14 +11,14 @@ category:
 
 **Windows下安装toolbox一直没成功，于是投机取巧，用虚拟机手工打造玩docker的方法。**  
 
-###步骤： 
+### 步骤： 
 
 - 安装虚拟机，安装centos
 - 在win下建立共享文件夹，假如是` f:/share`
 - 在centos里的mnt路径下，建立个挂载点：` /mnt/share/`
 - mount添加win下的共享文件夹
 
-###命令： 
+### 命令： 
 
 	
 	[root@localhost ~]# mount -t cifs -o username=user,password=pass //192.168.1.103/share /mnt/share/
@@ -27,7 +27,7 @@ category:
 	1.txt 2.txt
 
 
-###应用-来个go的helloworld
+### 应用-来个go的helloworld
 
 在share文件夹，写个go文件`helloworld.go`
 
