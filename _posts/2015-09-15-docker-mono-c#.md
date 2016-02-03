@@ -17,20 +17,20 @@ category:
 	$ docker run -it ubuntu bash
 
 
-###Update apt-get inside the container
+### Update apt-get inside the container
 
 
 
 	$ apt-get update
 
 
-###Install mono-complete
+### Install mono-complete
 
 
 	root@47b0e0464825:/# apt-get install mono-complete
 
 
-###Sanity test – run mono
+### Sanity test – run mono
 
 
 	root@47b0e0464825:/# mono
@@ -44,7 +44,7 @@ category:
 
 
 
-###Suspend container, back to host shell
+### Suspend container, back to host shell
 
 
 	$ <Control-P><Control-Q>
@@ -61,7 +61,7 @@ category:
 	87f7b9c4f3f5e809e3141b78117d6d8b984935a6b1023cbb9756409bdaad0cb4
 
 
-###Run new Docker image
+### Run new Docker image
 
 
 	root@localhost share]# docker images
@@ -69,7 +69,7 @@ category:
 	howie/monodev                          latest              87f7b9c4f3f5        3 minutes ago       589.8 MB
 
 
-###Create a hellomono.cs file
+### Create a hellomono.cs file
 
 
 `$ vim hellomono.cs`
@@ -86,12 +86,12 @@ category:
 	    }
 	}
 
-###compile
+### compile
 
 
 	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mcs hellomono.cs
  
-###Run
+### Run
 
 
 	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mono hellomono.exe
