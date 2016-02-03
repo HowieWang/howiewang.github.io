@@ -18,6 +18,7 @@ category:
 语句以分号结尾，一个分号就表示一个语句结束。多个语句可以写在一行内。
 
     var a = 1 + 3 ; var b = 'abc';
+
 分号前面可以没有任何内容，JavaScript引擎将其视为空语句。
 
     ;;;
@@ -35,10 +36,12 @@ JavaScript允许在变量赋值的同时，省略var命令声明变量。也就�
 可以在同一条var命令中声明多个变量。
 
     var a, b;
+
 JavaScirpt是一种动态类型语言，也就是说，变量的类型没有限制，可以赋予各种类型的值。
 
     var a = 1;
     a = 'hello';
+
 上面代码中，变量a起先被赋值为一个数值，后来又被重新赋值为一个字符串。第二次赋值的时候，因为变量a已经存在，所以不需要使用var命令。
 
 ** 变量提升**
@@ -46,17 +49,20 @@ JavaScript引擎的工作方式是，先解析代码，获取所有被声明的�
 
     console.log(a);
     var a = 1;
+
 上面代码首先使用console.log方法，在控制台（console）显示变量a的值。这时变量a还没有声明和赋值，所以这是一种错误的做法，但是实际上不会报错。因为存在变量提升，真正运行的是下面的代码。
 
     var a;
     console.log(a);
     a = 1;
+
 最后的结果是显示undefined，表示变量a已声明，但还未赋值。
 
 请注意，变量提升只对var命令声明的变量有效，如果一个变量不是用var命令声明的，就不会发生变量提升。
 
     console.log(b);
     b = 1;
+
 上面的语句将会报错，提示“ReferenceError: b is not defined”，即变量b未声明，这是因为b不是用var命令声明的，JavaScript引擎不会将其提升，而只是视为对顶层对象的b属性的赋值。
 
 
@@ -72,6 +78,7 @@ JavaScript语言允许，语句的前面有标签（label），相当于定位�
 
     label:
       statement
+
 标签可以是任意的标识符，但是不能是保留字，语句部分可以是任意语句。
 
 标签通常与break语句和continue语句配合使用，跳出特定的循环。
@@ -87,6 +94,7 @@ JavaScript语言允许，语句的前面有标签（label），相当于定位�
     // i=0, j=1
     // i=0, j=2
     // i=1, j=0 
+    
 上面代码为一个双重循环区块，break命令后面加上了top标签（注意，top不用加引号），满足条件时，直接跳出双层循环。如果break语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。
 
 
@@ -217,6 +225,6 @@ undefined表示不存在值，就是此处目前不存在任何值。典型用�
     // true
 
 
-    ## 参考  
+## 参考  
 
-    [http://javascript.ruanyifeng.com/](http://javascript.ruanyifeng.com/grammar/basic.html#toc0)
+[http://javascript.ruanyifeng.com/](http://javascript.ruanyifeng.com/grammar/basic.html#toc0)
