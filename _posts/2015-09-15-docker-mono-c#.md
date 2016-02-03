@@ -13,10 +13,12 @@ category:
 
 ### Start up an Ubuntu container
 
+
 	$ docker run -it ubuntu bash
 
 
 ###Update apt-get inside the container
+
 
 
 	$ apt-get update
@@ -24,10 +26,12 @@ category:
 
 ###Install mono-complete
 
+
 	root@47b0e0464825:/# apt-get install mono-complete
 
 
 ###Sanity test – run mono
+
 
 	root@47b0e0464825:/# mono
 	Usage is: mono [options] program [program-options]
@@ -42,6 +46,7 @@ category:
 
 ###Suspend container, back to host shell
 
+
 	$ <Control-P><Control-Q>
 	root@47b0e0464825:/# [root@localhost share]#
 	[root@localhost share]# docker ps
@@ -51,11 +56,13 @@ category:
 
 ### Commit changes to new Docker image
 
+
 	[root@localhost share]# docker commit 47b0e0464825 howie/monodev
 	87f7b9c4f3f5e809e3141b78117d6d8b984935a6b1023cbb9756409bdaad0cb4
 
 
 ###Run new Docker image
+
 
 	root@localhost share]# docker images
 	REPOSITORY                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
@@ -63,6 +70,7 @@ category:
 
 
 ###Create a hellomono.cs file
+
 
 `$ vim hellomono.cs`
 
@@ -80,9 +88,11 @@ category:
 
 ###compile
 
+
 	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mcs hellomono.cs
  
 ###Run
+
 
 	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mono hellomono.exe
 	
