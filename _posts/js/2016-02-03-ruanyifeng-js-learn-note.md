@@ -90,5 +90,133 @@ JavaScript语言允许，语句的前面有标签（label），相当于定位�
 上面代码为一个双重循环区块，break命令后面加上了top标签（注意，top不用加引号），满足条件时，直接跳出双层循环。如果break语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。
 
 
-### 数据类型
+## 数据类型
 
+JavaScript语言的每一个值，都属于某一种数据类型。JavaScript的数据类型，共有六种。（ES6又新增了第七种Symbol类型的值，本教程不涉及。）
+
+    数值（number）：整数和小数（比如1和3.14）
+    字符串（string）：字符组成的文本（比如”Hello World”）
+    布尔值（boolean）：true（真）和false（假）两个特定值
+    undefined：表示“未定义”或不存在，即此处目前没有任何值
+    null：表示空缺，即此处应该有一个值，但目前为空
+    对象（object）：各种值组成的集合
+
+通常，我们将数值、字符串、布尔值称为原始类型（primitive type）的值，即它们是最基本的数据类型，不能再细分了。而将对象称为合成类型（complex type）的值，因为一个对象往往是多个原始类型的值的合成，可以看作是一个存放各种值的容器。至于undefined和null，一般将它们看成两个特殊值。
+
+对象又可以分成三个子类型。
+
+    狭义的对象（object）
+    数组（array）
+    函数（function）
+
+狭义的对象和数组是两种不同的数据组合方式，而函数其实是处理数据的方法。JavaScript把函数当成一种数据类型，可以像其他类型的数据一样，进行赋值和传递，这为编程带来了很大的灵活性，体现了JavaScript作为“函数式语言”的本质。
+
+这里需要明确的是，JavaScript的所有数据，都可以视为广义的对象。不仅数组和函数属于对象，就连原始类型的数据（数值、字符串、布尔值）也可以用对象方式调用。
+
+### typeof运算符  
+JavaScript有三种方法，可以确定一个值到底是什么类型。
+
+    typeof运算符
+    instanceof运算符
+    Object.prototype.toString方法
+
+instanceof运算符和Object.prototype.toString方法，将在后文相关章节介绍。这里着重介绍typeof运算符。
+
+typeof运算符可以返回一个值的数据类型，可能有以下结果。
+
+- 原始类型:数值、字符串、布尔值分别返回number、string、boolean。  
+- 函数:函数返回function。  
+- undefined    
+- 除此以外，其他情况都返回object
+
+实际编程中，这个特点通常用在判断语句。
+
+    // 错误的写法
+    if (v) {
+      // ...
+    }
+    // ReferenceError: v is not defined
+
+    // 正确的写法
+    if (typeof v === "undefined") {
+      // ...
+    }
+
+
+    typeof window // "object"
+    typeof {} // "object"
+    typeof [] // "object"
+    typeof null // "object"
+
+从上面代码可以看到，空数组（[]）的类型也是object，这表示在JavaScript内部，数组本质上只是一种特殊的对象。
+
+另外，null的类型也是object，这是由于历史原因造成的。1995年JavaScript语言的第一版，所有值都设计成32位，其中最低的3位用来表述数据类型，object对应的值是000。当时，只设计了五种数据类型（对象、整数、浮点数、字符串和布尔值），完全没考虑null，只把它当作object的一种特殊值，32位全部为0。这是typeof null返回object的根本原因。
+
+为了兼容以前的代码，后来就没法修改了。这并不是说null就属于对象，本质上null是一个类似于undefined的特殊值。
+
+### null和undefined  
+
+首先，null像在Java里一样，被当成一个对象。但是，JavaScript的数据类型分成原始类型和合成类型两大类，Brendan Eich觉得表示”无”的值最好不是对象。
+
+其次，JavaScript的最初版本没有包括错误处理机制，发生数据类型不匹配时，往往是自动转换类型或者默默地失败。Brendan Eich觉得，如果null自动转为0，很不容易发现错误。
+
+因此，Brendan Eich又设计了一个undefined。他是这样区分的：null是一个表示”无”的对象，转为数值时为0；undefined是一个表示”无”的原始值，转为数值时为NaN。
+
+    Number(undefined) // NaN
+    5 + undefined // NaN
+
+但是，这样的区分在实践中很快就被证明不可行。目前null和undefined基本是同义的，只有一些细微的差别。
+
+null的特殊之处在于，JavaScript把它包含在对象类型（object）之中。
+
+    typeof null // "object"
+
+上面代码表示，查询null的类型，JavaScript返回object（对象）。
+
+**用法和含义** 
+
+对于null和undefined，可以大致可以像下面这样理解。
+
+null表示空值，即该处的值现在为空。典型用法是：
+
+    作为函数的参数，表示该函数的参数是一个没有任何内容的对象。
+    作为对象原型链的终点。
+
+undefined表示不存在值，就是此处目前不存在任何值。典型用法是：
+
+    变量被声明了，但没有赋值时，就等于undefined。
+    调用函数时，应该提供的参数没有提供，该参数等于undefined。
+    对象没有赋值的属性，该属性的值为undefined。
+    函数没有返回值时，默认返回undefined。
+    
+    var i;
+    i // undefined
+
+    function f(x){console.log(x)}
+    f() // undefined
+
+    var  o = new Object();
+    o.p // undefined
+
+    var x = f();
+    x // undefined
+
+
+### if判断  
+
+空数组（[]）和空对象（{}）对应的布尔值，都是true。
+
+    if ([]) {
+      console.log(true);
+    }
+    // true
+
+    if ({}) {
+      console.log(true);
+    }
+    // true
+
+
+    ## 参考  
+
+    [http://javascript.ruanyifeng.com/](http://javascript.ruanyifeng.com/grammar/basic.html#toc0)
