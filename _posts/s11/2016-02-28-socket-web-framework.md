@@ -19,7 +19,7 @@ category:
 网络上的两个程序通过一个双向的通信连接实现数据的交换，这个连接的一端称为一个socket。
 Socket的英文原义是“孔”或“插座”。作为BSD UNIX的进程通信机制，取后一种意思。通常也称作"套接字"，用于描述IP地址和端口，是一个通信链的句柄，可以用来实现不同虚拟机或不同计算机之间的通信。在Internet上的主机一般运行了多个服务软件，同时提供几种服务。每种服务都打开一个Socket，并绑定到一个端口上，不同的端口对应于不同的服务。Socket正如其英文原意那样，像一个多孔插座。一台主机犹如布满各种插座的房间，每个插座有一个编号，有的插座提供220伏交流电， 有的提供110伏交流电，有的则提供有线电视节目。 客户软件将插头插到不同编号的插座，就可以得到不同的服务
 
-![](http://f.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=dfd435fc14dfa9ece9235e4503b99c66/f2deb48f8c5494eedd1858f928f5e0fe99257e13.jpg)
+![](http://7xio9f.com1.z0.glb.clouddn.com/socketsocker-sever.jpg)
 
 根据连接启动的方式以及本地套接字要连接的目标，套接字之间的连接过程可以分为三个步骤：服务器监听，客户端请求，连接确认。
 （1）服务器监听：是服务器端套接字并不定位具体的客户端套接字，而是处于等待连接的状态，实时监控网络状态。
@@ -28,7 +28,7 @@ Socket的英文原义是“孔”或“插座”。作为BSD UNIX的进程通信
 
 所以说：socket是一个通信的桥梁，连接了服务端与客户端。
 
-![](http://e.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2225b8644fed2e73e8e48e7ee668caee/a2cc7cd98d1001e92d5e43efbd0e7bec55e797eb.jpg)
+![](http://7xio9f.com1.z0.glb.clouddn.com/socketsocket-useful.jpg)
 
 如果通过python的方式来实现socket通信流程，大概是这个样子：  
 
