@@ -18,6 +18,22 @@ layout: default
     </div>
 
    
+<!--多说挂了。换gitment-->
+ <div id="container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'location.href', // 可选。默认为 location.href
+      owner: 'howiewang',
+      repo: 'howiewang.github.io',
+      oauth: {
+        client_id: 'eb250aa747dba9013c83',
+        client_secret: 'e756b9d93b13f1abd94afde8e0676743a4852325',
+      },
+    })
+    gitment.render('container')
+    </script>
 
 
   </div>
