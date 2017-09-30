@@ -11,7 +11,6 @@ description: 不把github鼓捣成博客的程序猿不是一个好的喵星人
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  howiewang
-disqus-shortname: howie
 permalink: /:year/:month/:day/:title/
 
 # Build settings
