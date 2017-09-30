@@ -25,17 +25,10 @@ s.parentNode.insertBefore(gcse, s);
 <gcse:search></gcse:search>
 
 
-### see you again!
+### who am I？
 
-        int main(me)
-        {
-            auto who  = 程序员;
-            auto I   = 养喵人;
-            auto am  = 非典型c++码农;
-            关注 = python和移动互联网;
-            业余爱好  = 敲敲python，学学鸟语，上上公开课。
-            ??? = Linux + Python + Docker +...
-        }
+        Loading AI...
+        Based on Python C++ Angular Vue Html5 CSS3 Typescript JS Docker Linux...
 
 
 ### 超赞链接
@@ -46,5 +39,5 @@ s.parentNode.insertBefore(gcse, s);
 ### 几个已经存在的窝    
 
 * [主站](http://i.howie.wang)
-* [浩爷爱读书](http://pxjgz.lofter.com)
+* [简书](http://www.jianshu.com/u/39da13130c51)
 * [咱家的正牌喵星人](http://lulumiao.github.io/)
