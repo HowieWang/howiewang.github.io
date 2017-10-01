@@ -14,6 +14,9 @@ tags: coursera
 <!-- more-->
 
 >my practice files and task to commit
+
+曾经在coursera学习python时候的一些作业练习，貌似链接已经失效了，主要是结合JS做太空飞船游戏的。
+这门课强烈推荐啊！交互式的学习赞！👍
                 
                 2014.9-11
 
