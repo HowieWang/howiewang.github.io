@@ -38,6 +38,6 @@ s.parentNode.insertBefore(gcse, s);
 
 ### 几个已经存在的窝    
 
-* [主站](http://i.howie.wang)
+* [python文档精选sublimePython](http://sublimepython.top)
 * [简书](http://www.jianshu.com/u/39da13130c51)
-* [咱家的正牌喵星人](http://lulumiao.github.io/)
+* [喵星人也要github](http://lulumiao.github.io/)
