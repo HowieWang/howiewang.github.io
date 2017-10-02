@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "learn Python again"
+title:  "Python随身听基础篇-Python主要概念和发展趋势"
 date:   2015-10-18 20:06:05
-categories:  python
-excerpt:  this winter belongs to Python
+categories:  
+- pythonBasic
+- python随身听
+excerpt:  Python随身听基础篇
 ---
 
 * content
