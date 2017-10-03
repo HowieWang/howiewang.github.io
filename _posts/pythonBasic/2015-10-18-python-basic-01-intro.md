@@ -19,9 +19,11 @@ excerpt:  Python随身听基础篇
 
 点击链接，立即收听。
 
-- 网易云音乐
+- 喜马拉雅：
 
-<embed src="//music.163.com/style/swf/widget.swf?sid=909740465&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
+- 网易云音乐：
+
+<embed src="//music.163.com/style/swf/widget.swf?sid=909740465&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
 
 
 
