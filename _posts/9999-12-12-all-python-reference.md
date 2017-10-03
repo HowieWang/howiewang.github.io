@@ -16,7 +16,7 @@ category:
 
 - [docs.python3](https://docs.python.org/3/tutorial/index.html)
 - [tutorial.djangogirls](https://tutorial.djangogirls.org/zh/python_introduction/)
-- []()
+- [wikipedia-python](https://zh.wikipedia.org/wiki/Python)
 
 ## books
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python随身听基础篇-Python主要概念和发展趋势"
+title:  "Python随身听基础篇01-Python主要概念和发展趋势"
 date:   2015-10-18 20:06:05
 categories:  
 - pythonBasic
@@ -11,108 +11,73 @@ excerpt:  Python随身听基础篇
 * content
  {:toc}
 
-# New Python, new winter, new future!
+## 介绍
 
-> [指南针](http://www.cnblogs.com/wupeiqi/articles/4938499.html)  
+本文是《Python随身听》基础篇01的文字稿，介绍Python主要概念和发展趋势。
 
-<script>
-  (function() {
-    var cx = '001822116234117285801:j43wicubn8g';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+>《Python随身听》是喜马拉雅听app上面，由第8哥（De8ug）录制的一档Python节目。致力于带给你全新的python学习和复习体验，打造一门听着就能学会python的空中课堂。
 
-## python详细介绍
+点击链接，立即收听。
 
-python的起源：范爷打发时间在1989年过圣诞节编出来的。    
-低级到高级语言分类：二进制，汇编，c，python...    
-目前状况：应用广泛，TIOBE排名上升明显。Oct2015，5th。2002年到今天整体处于上升趋势。    
+- 网易云音乐
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=909740465&auto=1&height=66"></iframe>
+
+
+
+## python起源与应用
+
+python的起源：吉多·范罗苏姆 为了打发时间在1989年过圣诞节编出来的。  
+
+目前状况：应用广泛，TIOBE排名上升明显。这两年一直徘徊在第四第五的位置，仅次于Java，C，C#。    
 应用领域：数据分析，系统编程，组件集成，网络服务，图像处理，数值计算和科学计算，自动化测试，自动化运维    
-相关公司：Youtube, Dropbox, BT, Quora, Google, Yahoo!, Facebook, NASA    
-为什么用python：提供了大量类库，可以完成相关功能；linux原装，速度慢，但与其他语言比起来并不明显。    
- pypy，很有意思，用python把python直接编译成机器码。在调用相同类库时候，速度有明显提升。
+相关公司：Youtube, Dropbox, BT, Quora, Google, Yahoo!, Facebook, NASA等。
+
+近两年，随着人工智能的火爆，python更是被宣传的越来越厉害。几乎所有的机器学习算法都有python的版本，几乎所有的深度学习框架都可以用python来对接开发。在数据挖掘，数据分析领域，python几乎一只独大。
+
+所以，这也是越来越多人学习python的原因。
+
+## python特点
+
+- 语法简单
+- 大小写敏感
+- 包含了一组功能完备的标准库，能够轻松完成很多常见的任务。
+- 使用缩进来定义语句块。这里推荐用4空格
+- 具备垃圾回收功能，能够自动管理内存使用。
           
 ## python环境搭建
 
 - window：下载-安装-环境变量
 - linux：自带
-**区别，多进程时候有区别， linux下才有多进程的类库可以用。**
-          
-## python入门  
-   helloworld的运行流程：词法分析-
-          
-   解释器读取代码按照ascii码读取的，
+- 虚拟环境，结合anaconda来做。
 
-第一行的默认运行环境：
+我另外有个系列分享，叫做《小灶时间》，有文档并且有视频详细介绍了咱们使用anaonda管理python的虚拟环境。
 
-          #!/usr/bin/env python
-          
-制定默认的读取方式，用什么编码去读
+文档：http://www.jianshu.com/p/95555e785934    
+视频：https://v.qq.com/x/page/b05198q5eke.html
 
-          #-*- coding:utf-8 -*-
+## 关于版本
 
-**变量名命名：**    
-- 不能用关键字   
-- 不能用数字开头     
-- 只能用数字，字母和下划线组成           
+目前还是两个版本并行的状态，2.7和3.其中：
 
-字符串修改会在后面重新开辟空间    
-用加号会多开辟空间     
-'a' + 'b' + 'c'会分三部分形成最后的字符串，其他自动垃圾回收。     
+最新发行时间	    
+- 3.6.2 / 2017年7月17日     
+- 2.7.13 / 2016年12月17日
 
-### python的优化
-同名的字符串的id会是一样的。    
+根据python官网显示，python3.7也已经在开发中。由于python3目前在市面使用的范围越来越广，python2也过几年就不会再维护，所以python随身听给大家做的代码示例都是基于最新版本的python。并且，随着python的升级，有变化的地方我也会随时补充修改。所以，这是一档与时俱进的python节目和教程。
+                                
 
+## 总结
 
-## 基本数据类型：
-   - 单值：数字（int, long, float,complex）,布尔值，字符串(str) 
-   - 集合：列表（数组），元组，字典，哈希表（set）
+- python起源与应用
+- python特点
+- python环境搭建
+- 关于版本
 
-字符串的占位符：         
-     - %             
-     - {1}{2}               
+好的，今天节目就到这，关于python的一些基础知识，你都了解了吗？ 了解了之后下一期我们就开始写代码！
 
-字符串分割：变成列表[]                 
-tab = \t                  
+我们会从Python的基本数据结构，流程控制语句，函数与面向对象，网络编程基础来一一讲解python各种标准库的用法。
 
-
-[]列表list                 
-- 修改后，内存地址不变，因为是引用类型                    
-- join把列表变成字符串，‘—’表示连接符                          
-
-()元组tuple                    
-- 不能添加，删除，修改。                   
-
-{}字典dict                   
-- 键值对                      
-- 无序，特殊的for循环。.items（）                           
-- .keys(), .values()都是列表                            
-
-
-文件读写：                    
-- 找到path                     
-- 打开file，open                    
-- 操作                    
-- 关闭                      
-
-
-
-----------
-## QA              
-**问题1：**                
-          - 怎么import文件夹内的模块？                       
-          - 写个空文件__init__.py                          
-**问题2：**                       
-          - 导入顺序？                               
-          - 导入顺序是，*.py,*.pyc如果内容是一样的，就先执行pyc文件，否则就是py优先编译，然后在执行。                                       
-**问题3：**                                      
-          - 一个类里面含有什么，就可以使用[-1]?                                      
+python随身听，程序任我行。咱们明天见！
 
 
