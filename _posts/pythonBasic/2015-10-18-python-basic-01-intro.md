@@ -21,7 +21,7 @@ excerpt:  Python随身听基础篇
 
 - 网易云音乐
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=3&id=909740465&auto=1&height=66"></iframe>
+<embed src="//music.163.com/style/swf/widget.swf?sid=909740465&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
 
 
 
@@ -53,8 +53,8 @@ python的起源：吉多·范罗苏姆 为了打发时间在1989年过圣诞节�
 
 我另外有个系列分享，叫做《小灶时间》，有文档并且有视频详细介绍了咱们使用anaonda管理python的虚拟环境。
 
-文档：http://www.jianshu.com/p/95555e785934    
-视频：https://v.qq.com/x/page/b05198q5eke.html
+文档：[http://www.jianshu.com/p/95555e785934](http://www.jianshu.com/p/95555e785934)    
+视频：[https://v.qq.com/x/page/b05198q5eke.html](https://v.qq.com/x/page/b05198q5eke.html)
 
 ## 关于版本
 
