@@ -22,6 +22,7 @@ excerpt:  Python随身听基础篇
 - 喜马拉雅：
 
 - 网易云音乐：
+- [https://music.163.com/#/program?id=909740465](https://music.163.com/#/program?id=909740465)
 
 <embed src="//music.163.com/style/swf/widget.swf?sid=909740465&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
 
