@@ -15,7 +15,7 @@ excerpt:  Python随身听基础篇
 
 本文是《Python随身听》基础篇01的文字稿，介绍Python主要概念和发展趋势。
 
->《Python随身听》是喜马拉雅听app上面，由第8哥（De8ug）录制的一档Python节目。致力于带给你全新的python学习和复习体验，打造一门听着就能学会python的空中课堂。
+>《Python随身听》是由第8哥（De8ug）录制的一档Python节目。致力于带给你全新的python学习和复习体验，打造一门听着就能学会python的空中课堂。
 
 点击链接，立即收听。
 
