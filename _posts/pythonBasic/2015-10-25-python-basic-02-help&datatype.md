@@ -192,4 +192,4 @@ center(...) method of builtins.str instance
 请打开python控制台一起练习。有任何问题或建议欢迎留言。
 
 
-python随身听，程序任我行。下一期，我们将一起学习python中常用的内置数据结构，字典，列表等的使用，轻请关注！
+python随身听，程序任我行。下一期，我们将一起学习python中常用的内置数据结构，字典，列表等的使用，敬请关注！
