@@ -3,7 +3,7 @@ layout: post
 title:  all python references
 category: 
 - reference  
-
+stickie: true
 ---
 
 * content
