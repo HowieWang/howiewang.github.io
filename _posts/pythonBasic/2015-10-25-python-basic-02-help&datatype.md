@@ -21,8 +21,13 @@ stickie: true
 点击链接，立即收听。
 
 - 喜马拉雅：
+<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=54359085" width="260" height="36"></object>
 
 - 网易云音乐：
+-[https://music.163.com/#/program?id=909955987](https://music.163.com/#/program?id=909955987)
+
+<embed src="//music.163.com/style/swf/widget.swf?sid=909955987&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
+
 
 正式开始本期节目之前，我假设你已经在自己的电脑上安装好了python环境。而且我强烈推荐你安装的是python的虚拟环境，如果你还没有安装，可以到我的简书上，搜索“小灶时间 虚拟环境”找到文章，去进行安装。
 
