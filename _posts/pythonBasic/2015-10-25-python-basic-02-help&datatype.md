@@ -21,10 +21,10 @@ stickie: true
 点击链接，立即收听。
 
 - 喜马拉雅：
-<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=54359085" width="260" height="36"></object>
+<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=54359085" width="340" height="36"></object>
 
 - 网易云音乐：
--[https://music.163.com/#/program?id=909955987](https://music.163.com/#/program?id=909955987)
+[https://music.163.com/#/program?id=909955987](https://music.163.com/#/program?id=909955987)
 
 <embed src="//music.163.com/style/swf/widget.swf?sid=909955987&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
 
