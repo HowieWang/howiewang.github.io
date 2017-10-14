@@ -14,16 +14,29 @@ layout: default
       <div class="post-list-body">
         
         <div class="all-posts" post-cate="All">
+          <!-- stickie post -->
           {% for post in paginator.posts %}
+            {% if post.stickie != true %}
+                {% continue %}
+            {% endif %}
+            <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+              <h2>
+              [置顶]-{{ post.title }}
+              </h2>
+              <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
+          {% endfor %}
+          <!-- others -->
+          {% for post in paginator.posts %}
+            {% if post.stickie == true %}
+                {% continue %}
+            {% endif %}
             <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
               <h2>
               {{ post.title }}
               </h2>
               <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
             </a>
-
-
-
           {% endfor %}
           <!-- 分页 -->
       <div class="paginator">

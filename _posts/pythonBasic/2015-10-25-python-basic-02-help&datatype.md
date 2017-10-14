@@ -6,6 +6,7 @@ categories:
 - pythonBasic
 - python随身听
 excerpt:  Python随身听基础篇02-查找帮助与基本类型
+stickie: true
 ---
 
 * content
