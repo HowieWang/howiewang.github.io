@@ -6,7 +6,7 @@ categories:
 - pythonBasic
 - python随身听
 excerpt:  Python随身听基础篇02-查找帮助与基本类型
-stickie: true
+stickie: false
 ---
 
 * content
@@ -187,7 +187,7 @@ center(...) method of builtins.str instance
 （更多方法的使用请自己查看帮助，后续节目中也会在遇到时候进行讲解）
 ```
 
-# 总结
+## 总结
 
 今天我们学习了如下知识点：
 
