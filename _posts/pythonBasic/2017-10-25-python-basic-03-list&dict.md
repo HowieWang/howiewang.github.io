@@ -21,20 +21,20 @@ stickie: true
 点击链接，立即收听。
 
 - 喜马拉雅：
-<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=54359085" width="340" height="36"></object>
+<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=57911343" width="340" height="36"></object>
 
 - 网易云音乐：
-[https://music.163.com/#/program?id=909955987](https://music.163.com/#/program?id=909955987)
+[https://music.163.com/#/program?id=910763036](https://music.163.com/#/program?id=910763036)
 
-<embed src="//music.163.com/style/swf/widget.swf?sid=909955987&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
+<embed src="//music.163.com/style/swf/widget.swf?sid=910763036&type=3&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">
 
 list和dict，顾名思义，就是列表和字典，这是python中非常基础的数据结构，也是非常重要且用途最广的数据结构，所以我把它们放在数据结构的第一节来介绍。
 
-## 字典list就是一串糖葫芦
+## 列表list就是一串糖葫芦
 
 list是python的一种内置数据结构，你把它想象成一串糖葫芦就好了。python提前设定好了list的特点和一些固定操作（或方法或函数），计算机知道该怎么进行具体操作。
 
-list用中括号表示，里面的值用英文的都好分开。
+list用中括号表示，里面的值用英文的逗号分开。
 
 
 ### 特点与操作
@@ -42,7 +42,7 @@ list用中括号表示，里面的值用英文的都好分开。
 list有这么几个简单的特点：
 
 - 长度不固定，就像糖葫芦可以串8个，串10个，当然也有奸商可能就串6个，甚至4个
-- 类型不固定，糖葫芦可以串山楂，黑枣，橘子等等，list里面也可以放字符串，数字，设置列表等等
+- 类型不固定，糖葫芦可以串山楂，黑枣，橘子等等，list里面也可以放字符串，数字，列表等等
 - 可以修改，就好像制作糖葫芦，你本来要串个山楂，结果串了个橘子，可以把对应的那个错的修改了就好啦。
 
 list可以做这样的几个操作：
