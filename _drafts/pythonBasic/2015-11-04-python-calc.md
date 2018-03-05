@@ -102,7 +102,7 @@ category:
 
 	expr = '4 /(3-2) * -3'
 
-算法代码放到[github](https://github.com/HowieWang/pythonStudy/blob/master/s11/day2/calc_exp.py)，欢迎你来帮我完善。
+算法代码放到[github](https://github.com/de8ug/pythonStudy/blob/master/s11/day2/calc_exp.py)，欢迎你来帮我完善。
 
 
 

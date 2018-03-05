@@ -10,7 +10,7 @@ description: A blog about Python Django Docker Angular Vuejs Linux and More...
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-github_username:  howiewang
+github_username:  de8ug
 permalink: /:year/:month/:day/:title/
 
 # Build settings

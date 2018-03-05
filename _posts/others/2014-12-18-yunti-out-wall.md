@@ -29,7 +29,7 @@ CentOS 7系统安装docker很方便。
     $ sudo service docker start
 
 
-其他系统请移步这里：http://howiewang.github.io/2015/08/01/install-docker/
+其他系统请移步这里：http://de8ug.github.io/2015/08/01/install-docker/
 其实貌似大部分直接这一句就搞定了：
 
 运行Docker的安装脚本，如下命令：

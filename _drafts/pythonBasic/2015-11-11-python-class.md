@@ -101,4 +101,4 @@ class后面紧接着是类名，即Student，类名通常是大写开头的单�
 
 具体使用看我这个修改ha配置代码的例子吧！欢迎指正！
 
-[examlpe on github ](https://github.com/HowieWang/pythonStudy/tree/master/s11/day3)
+[examlpe on github ](https://github.com/de8ug/pythonStudy/tree/master/s11/day3)

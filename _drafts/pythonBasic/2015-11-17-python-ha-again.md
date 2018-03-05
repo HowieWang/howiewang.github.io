@@ -124,5 +124,5 @@ day4
             print 'success!'
 
 
-完整源文件请查看[github](https://github.com/HowieWang/pythonStudy/tree/master/s11/day4)
+完整源文件请查看[github](https://github.com/de8ug/pythonStudy/tree/master/s11/day4)
 
