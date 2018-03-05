@@ -4,10 +4,6 @@
 
 **模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-统一使用md写博客，并且与cnblogs进行同步。
-
-[cnblogs博客](http://de8ug.cnblogs.com/)
-
 
 
 
