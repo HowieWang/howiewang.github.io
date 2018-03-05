@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-FTPplus加强专业版
+title:  【De8ug玩python】-FTPplus加强专业版
 category:
 -   python
 
@@ -60,7 +60,7 @@ server:
 - 直接启动，会提示是否建立用户，  
 - 输入 “1”，新建用户，后面在客户端可用这个去连接调试。  
 - 输入其他任意字符，可以直接启动服务端：  
-- 默认用户密码：howie 111     
+- 默认用户密码：De8ug 111     
 - 断点续传测试方法：采用的是客户端ctrl+c打断传输，然后保存位置到文件，再次启动客户端，从上次的位置继续传输。
 
 client：

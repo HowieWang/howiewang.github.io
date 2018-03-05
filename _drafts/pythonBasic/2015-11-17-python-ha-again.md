@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-再战ha配置文件继续找对象
+title:  【De8ug玩python】-再战ha配置文件继续找对象
 category: 
 - python  
 ---

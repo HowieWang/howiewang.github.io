@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-字典与列表
+title:  【De8ug玩python】-字典与列表
 category: 
 - python  
 ---

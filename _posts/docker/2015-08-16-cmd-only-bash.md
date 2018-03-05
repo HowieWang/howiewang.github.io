@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩docker】-命令行只显示-bash-4.1#
+title:  【De8ug玩docker】-命令行只显示-bash-4.1#
 category: 
 - docker  
 
@@ -63,6 +63,6 @@ source以下使得其生效：
 ---
 如果懒得自己写，你可以直接`wget`我的文件:
 
-	http://howie.wang/.bashrc
-	http://howie.wang/.bash_profile
+	http://De8ug.wang/.bashrc
+	http://De8ug.wang/.bash_profile
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-类与对象
+title:  【De8ug玩python】-类与对象
 category: 
 - python  
 ---
@@ -67,7 +67,7 @@ class后面紧接着是类名，即Student，类名通常是大写开头的单�
         #!/usr/bin/env Python
         #-*- coding:utf-8 -*-
 
-        __author__ = 'SothisHowie'
+        __author__ = 'SothisDe8ug'
 
         class ColorMe(object):
             """

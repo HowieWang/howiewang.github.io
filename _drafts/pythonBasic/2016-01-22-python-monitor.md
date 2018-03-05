@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-图解python监控
+title:  【De8ug玩python】-图解python监控
 category: 
 -   python
 - redis

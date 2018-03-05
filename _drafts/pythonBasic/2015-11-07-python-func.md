@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-函数的使用
+title:  【De8ug玩python】-函数的使用
 category: 
 - python  
 ---

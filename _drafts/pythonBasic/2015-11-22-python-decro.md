@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-装饰器很好玩
+title:  【De8ug玩python】-装饰器很好玩
 category: 
 - python  
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-集合及其扩展
+title:  【De8ug玩python】-集合及其扩展
 category: 
 - python  
 ---

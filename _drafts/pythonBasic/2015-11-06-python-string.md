@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-无敌字符串
+title:  【De8ug玩python】-无敌字符串
 category: 
 - python  
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-我所理解的面向对象
+title:  【De8ug玩python】-我所理解的面向对象
 category:
 -   python
 

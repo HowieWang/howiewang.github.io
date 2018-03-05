@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-python对象的思维导图
+title:  【De8ug玩python】-python对象的思维导图
 category:
 -   python
 

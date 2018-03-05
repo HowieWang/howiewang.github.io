@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-多线程从0到1到澡堂子洗澡
+title:  【De8ug玩python】-多线程从0到1到澡堂子洗澡
 category:
 -   python
 
@@ -262,7 +262,7 @@ The  concurrent.futures library has a  ThreadPoolExecutor class that can be used
     #!/usr/bin/env python
     # -*- coding:utf-8 -*-
 
-    __author__ = 'SothisHowie'
+    __author__ = 'SothisDe8ug'
 
     # standard library modules
     from Queue import Queue

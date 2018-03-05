@@ -153,7 +153,7 @@ HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行�
 
         def index(request):
             t = loader.get_template('hello.html')  # load template
-            c = Context({'name': 'howie'}) # context, add data to template to render
+            c = Context({'name': 'De8ug'}) # context, add data to template to render
             html = t.render(c) # str
             return HttpResponse(html)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩python】-堡垒机的雏形-堡垒蛋
+title:  【De8ug玩python】-堡垒机的雏形-堡垒蛋
 category: 
 - python
 - mysql
@@ -273,14 +273,14 @@ ubuntu下mysql-python模块的安装
     +----+-------+
     | id | name  |
     +----+-------+
-    |  1 | howie |
+    |  1 | De8ug |
     |  2 | alex  |
     +----+-------+
     2 rows in set (0.00 sec)
     --------------------
     使用字典输出：
 
-    {'id': 1L, 'name': u'howie'}
+    {'id': 1L, 'name': u'De8ug'}
     {'id': 2L, 'name': u'alex'}
     {'host_group': u'DBA', 'user_id': 1L, 'id': 1L, 'host_ip': u'192.168.1.106'}
     {'host_group': u'DEV', 'user_id': 2L, 'id': 2L, 'host_ip': u'127.0.0.1'}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  【Howie玩docker】-使用mono编译c#程序
+title:  【De8ug玩docker】-使用mono编译c#程序
 category: 
 - docker  
 
@@ -57,7 +57,7 @@ category:
 ### Commit changes to new Docker image
 
 
-	[root@localhost share]# docker commit 47b0e0464825 howie/monodev
+	[root@localhost share]# docker commit 47b0e0464825 De8ug/monodev
 	87f7b9c4f3f5e809e3141b78117d6d8b984935a6b1023cbb9756409bdaad0cb4
 
 
@@ -66,7 +66,7 @@ category:
 
 	root@localhost share]# docker images
 	REPOSITORY                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-	howie/monodev                          latest              87f7b9c4f3f5        3 minutes ago       589.8 MB
+	De8ug/monodev                          latest              87f7b9c4f3f5        3 minutes ago       589.8 MB
 
 
 ### Create a hellomono.cs file
@@ -89,12 +89,12 @@ category:
 ### compile
 
 
-	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mcs hellomono.cs
+	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono De8ug/monodev mcs hellomono.cs
  
 ### Run
 
 
-	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono howie/monodev mono hellomono.exe
+	[root@localhost share]# docker run -it --rm -v $(pwd):/mono -w /mono De8ug/monodev mono hellomono.exe
 	
 >Hello Mono!
 
