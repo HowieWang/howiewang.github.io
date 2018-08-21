@@ -3,7 +3,7 @@ layout: post
 title:  "Python随身听基础篇02-查找帮助与基本类型"
 date:   2015-10-25 20:06:05
 categories:  
-- pythonBasic
+- python
 - python随身听
 excerpt:  Python随身听基础篇02-查找帮助与基本类型
 stickie: false

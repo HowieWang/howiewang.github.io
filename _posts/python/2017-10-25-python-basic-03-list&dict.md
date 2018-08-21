@@ -3,7 +3,7 @@ layout: post
 title:  "Python随身听基础篇03-基本数据结构list和dict"
 date:   2017-10-25 20:06:05
 categories:  
-- pythonBasic
+- python
 - python随身听
 excerpt:  Python随身听基础篇03-基本数据结构list和dict
 stickie: true
