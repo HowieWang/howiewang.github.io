@@ -24,7 +24,7 @@ layout: default
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
     var gitment = new Gitment({
-      id: '<%= post.date %>',
+      id: window.location.pathname,
         owner: 'de8ug',
       repo: 'de8ug.github.io',
       oauth: {
