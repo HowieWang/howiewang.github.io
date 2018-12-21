@@ -67,7 +67,7 @@ class后面紧接着是类名，即Student，类名通常是大写开头的单�
         #!/usr/bin/env Python
         #-*- coding:utf-8 -*-
 
-        __author__ = 'SothisDe8ug'
+        __author__ = 'De8ug'
 
         class ColorMe(object):
             """
@@ -100,5 +100,3 @@ class后面紧接着是类名，即Student，类名通常是大写开头的单�
         ColorMe('somestr').blue()
 
 具体使用看我这个修改ha配置代码的例子吧！欢迎指正！
-
-[examlpe on github ](https://github.com/de8ug/pythonStudy/tree/master/s11/day3)
