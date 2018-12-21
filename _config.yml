@@ -11,8 +11,7 @@ description: Keep going...
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  de8ug
-# permalink: /:year/:month/:day/:title/
-permalink: /:year/:month/:day/:id/
+permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
