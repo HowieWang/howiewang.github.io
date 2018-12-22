@@ -206,15 +206,16 @@ price_dic = {
 }
 
 
-def count_price(price, count):
-    return price * count
+def count_price(price_dic, egg_count, tomato_count):
+    buy_egg = price_dic[egg_price] * egg_count
+    buy_tomato = price_dic[tomato_price] * tomato_count
+    return buy_egg, buy_tomato
 
 def buy(egg_count, tomato_count, all_money=100, see_beef=True, price_dic):
     if see_beef:
         tomato_count = 2
 
-    buy_egg = count_price(price_dic[egg_price], egg_count)
-    buy_tomato = count_price(price_dic[tomato_price], tomato_count)
+    buy_egg, buy_tomato = count_price(price_dic, egg_count, tomato_count)
 
     left = all_money - buy_egg - buy_tomato
 
