@@ -6,7 +6,7 @@ categories:
 - python
 - python随身听
 excerpt:  Python随身听基础篇03-基本数据结构list和dict
-stickie: true
+stickie: false
 ---
 
 * content

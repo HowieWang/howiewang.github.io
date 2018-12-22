@@ -1,27 +1,36 @@
 ---
 layout: post
-title:  【De8ug玩python】-函数的使用
-category: 
-- python  
+title:  Python随身听基础篇08-函数的概念与应用
+categories:  
+- python
+- python随身听
+excerpt:  Python随身听基础篇08-函数的概念与应用
+stickie: true
 ---
 
 * content
 {:toc}
 
+## 介绍
 
-## 帮助三剑客  
+本文是《Python随身听》基础篇03的文字稿，基本数据结构list和dict。
 
-- dir  
-- help  
-- google
+>《Python随身听》是由第8哥（De8ug）录制的一档Python节目。致力于带给你全新的python学习和复习体验，打造一门听着就能学会python的空中课堂。
+
+点击链接，立即收听。
+
+- 喜马拉雅：
+<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=57911343" width="340" height="36"></object>
 
 
-## 用法举例  
 
-### 函数式编程和面向过程的区别
+## 函数概念
+
+### 函数式编程和面向对象的区别
 
 函数式：将某功能代码封装到函数中，日后便无需重复编写，仅调用函数即可
 面向对象：对函数进行分类和封装，让开发“更快更好更强...”
+
 函数式编程最重要的是增强代码的重用性和可读性
 
 ### 函数的定义和使用
