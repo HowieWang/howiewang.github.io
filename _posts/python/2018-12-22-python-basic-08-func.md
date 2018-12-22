@@ -19,8 +19,8 @@ stickie: true
 
 点击链接，立即收听。
 
-- 喜马拉雅：
-<object type="application/x-shockwave-flash" id="ximalaya_player" data="http://www.ximalaya.com/swf/sound/red.swf?id=57911343" width="340" height="36"></object>
+- [喜马拉雅](https://www.ximalaya.com/jiaoyu/11009485/)
+- [网易云音乐](https://music.163.com/#/djradio?id=350523062)
 
 
 
