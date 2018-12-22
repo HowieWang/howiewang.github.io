@@ -61,6 +61,34 @@ stickie: true
 - 默认参数
 - 动态参数
 
+```
+# 普通参数
+
+def add(a, b):
+    return a+b
+
+add(55, 66)
+
+# 默认参数
+
+def add(a=1, b=2):
+    return a+b
+
+add(55, 66)
+add()
+
+# 动态参数
+
+In [1]: def add(*a, **b):
+   ...:     print(a, b)
+   ...:
+
+In [2]: add(1,2,3,4, {"a":2, "b":3, "c": 6})
+(1, 2, 3, 4, {'a': 2, 'b': 3, 'c': 6}) {}
+
+
+```
+
 ### 返回值
 
 函数是一个功能块，该功能到底执行成功与否，需要通过返回值来告知调用者。
@@ -157,7 +185,7 @@ price_dic = {
 }
 
 
-def buy(egg_count, tomato_count, all_money=100, see_beef=True):
+def buy(egg_count, tomato_count, all_money=100, see_beef=True, price_dic):
     if see_beef:
         tomato_count = 2
 
@@ -181,7 +209,7 @@ price_dic = {
 def count_price(price, count):
     return price * count
 
-def buy(egg_count, tomato_count, all_money=100, see_beef=True):
+def buy(egg_count, tomato_count, all_money=100, see_beef=True, price_dic):
     if see_beef:
         tomato_count = 2
 
@@ -201,4 +229,4 @@ def buy(egg_count, tomato_count, all_money=100, see_beef=True):
 
 今天的问题是：现在是指定了买什么物品，如果让我们的函数通用性更强，支持购买任何物品的计算，该怎么继续优化呢？
 
-欢迎留言评论。也欢迎关注我的公众号：第8哥小灶时间，有任何问题可以直接提问，并第一时间获取节目更新信息。
+欢迎留言评论。也欢迎关注我的公众号：`第8哥小灶时间`，有任何问题可以直接提问，并第一时间获取节目更新信息。
